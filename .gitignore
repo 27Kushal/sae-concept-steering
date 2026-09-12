@@ -1,0 +1,29 @@
+# Python environment
+.venv/
+env/
+venv/
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Data and Checkpoints
+data/
+checkpoints/
+*.pt
+*.safetensors
+*.npy
+*.bin
+
+# Evaluation and Logs
+results/generated/
+wandb/
+.system_generated/

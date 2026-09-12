@@ -1,0 +1,52 @@
+{
+  "scale": "small",
+  "model": {
+    "model_name": "gpt2",
+    "d_model": 768,
+    "target_layer": 6,
+    "hook_name": "blocks.6.hook_resid_post",
+    "device": "auto"
+  },
+  "sae": {
+    "d_model": 768,
+    "expansion_factor": 8,
+    "d_sae": 6144,
+    "l1_coefficient": 0.0003,
+    "normalize_decoder": true,
+    "init_decoder_norm": 1.0
+  },
+  "data": {
+    "dataset_name": "wikitext",
+    "dataset_config": "wikitext-2-raw-v1",
+    "split": "train",
+    "context_length": 128,
+    "batch_size": 8,
+    "total_tokens": 20000,
+    "shard_size_tokens": 10000,
+    "cache_dir": "data/activations_small",
+    "seed": 42
+  },
+  "train": {
+    "lr": 0.0004,
+    "betas": [0.9, 0.999],
+    "eps": 1e-08,
+    "batch_size": 512,
+    "total_steps": 200,
+    "warmup_steps": 20,
+    "eval_every": 50,
+    "save_every": 100,
+    "checkpoint_dir": "checkpoints/small",
+    "dead_feature_threshold": 1e-06,
+    "dead_feature_window": 10000
+  },
+  "steering": {
+    "target_layer": 6,
+    "hook_name": "blocks.6.hook_resid_post",
+    "steering_alphas": [-4.0, 0.0, 4.0],
+    "max_new_tokens": 30,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "num_samples_per_prompt": 2,
+    "results_dir": "results/small"
+  }
+}

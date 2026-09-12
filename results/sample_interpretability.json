@@ -1,0 +1,89 @@
+[
+  {
+    "feature_idx": 42,
+    "sample_type": "top_active",
+    "status": "interpretable",
+    "max_activation": 8.42,
+    "hypothesis": "Programming syntax and code delimiters (e.g., 'def', 'import', ':')",
+    "top_tokens": ["def", "import", ":"],
+    "validation_metrics": {
+      "mean_positive_act": 6.82,
+      "mean_negative_act": 0.21,
+      "specificity": 0.89,
+      "pos_firing_rate": 1.0,
+      "neg_firing_rate": 0.0
+    },
+    "snippets": [
+      {
+        "activation": 8.42,
+        "token": "def",
+        "snippet": "def calculate_loss(pred, target):"
+      },
+      {
+        "activation": 7.95,
+        "token": "import",
+        "snippet": "import torch\nimport numpy as np"
+      }
+    ]
+  },
+  {
+    "feature_idx": 15,
+    "sample_type": "top_active",
+    "status": "interpretable",
+    "max_activation": 6.18,
+    "hypothesis": "Positive sentiment and evaluative praise (e.g., 'great', 'amazing', 'brilliant')",
+    "top_tokens": ["great", "amazing", "love"],
+    "validation_metrics": {
+      "mean_positive_act": 5.12,
+      "mean_negative_act": 0.44,
+      "specificity": 0.74,
+      "pos_firing_rate": 0.95,
+      "neg_firing_rate": 0.05
+    },
+    "snippets": [
+      {
+        "activation": 6.18,
+        "token": "amazing",
+        "snippet": "The performance was truly amazing and captivating."
+      }
+    ]
+  },
+  {
+    "feature_idx": 512,
+    "sample_type": "random",
+    "status": "polysemantic_or_noisy",
+    "max_activation": 2.05,
+    "hypothesis": "Lexical association with tokens: 'the', 'with', 'for'",
+    "top_tokens": ["the", "with", "for"],
+    "validation_metrics": {
+      "mean_positive_act": 1.42,
+      "mean_negative_act": 1.16,
+      "specificity": 0.18,
+      "pos_firing_rate": 0.8,
+      "neg_firing_rate": 0.7
+    },
+    "snippets": [
+      {
+        "activation": 2.05,
+        "token": "the",
+        "snippet": "across the wide river"
+      }
+    ]
+  },
+  {
+    "feature_idx": 3841,
+    "sample_type": "random",
+    "status": "dead",
+    "max_activation": 0.0,
+    "hypothesis": "Inactive / Dead Feature: no activations observed across sample corpus.",
+    "top_tokens": [],
+    "validation_metrics": {
+      "mean_positive_act": 0.0,
+      "mean_negative_act": 0.0,
+      "specificity": 0.0,
+      "pos_firing_rate": 0.0,
+      "neg_firing_rate": 0.0
+    },
+    "snippets": []
+  }
+]
