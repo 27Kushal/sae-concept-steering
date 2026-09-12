@@ -13,7 +13,7 @@ logger = logging.getLogger(__name__)
 
 CONCEPTS = {
     "python_code": {
-        "feature_idx": 42,  # Target feature index (or determined from Part 3)
+        "feature_idx": 4283,  # Target feature index (Feature #4283 represents Python 'def' syntax in 10M checkpoint)
         "test_prompts": [
             "Write a function that",
             "Here is the implementation:",

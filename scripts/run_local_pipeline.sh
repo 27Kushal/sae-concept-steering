@@ -44,12 +44,17 @@ $PYTHON scripts/03_interpret_features.py \
 
 # Step 4: Concept Steering & Quantitative Evaluation
 echo ""
-echo ">>> Step 4/4: Steering generation and benchmarking vs Difference-of-Means..."
+echo ">>> Step 4/5: Steering generation and benchmarking vs Difference-of-Means..."
 $PYTHON scripts/04_steer_and_evaluate.py \
     --checkpoint checkpoints/small/final \
     --concept python_code \
     --alphas -4.0 0.0 4.0 \
     --output_csv results/evaluation_metrics.csv
+
+# Step 5: Export Interactive Visualizer Dashboard
+echo ""
+echo ">>> Step 5/5: Exporting interactive visualizer..."
+$PYTHON scripts/export_visualizer.py
 
 echo ""
 echo "======================================================================"
@@ -59,4 +64,5 @@ echo " - Activations: data/activations_small/"
 echo " - SAE Checkpoint: checkpoints/small/final/"
 echo " - Interpretation: results/feature_interpretability_report.json"
 echo " - Evaluation Table: results/evaluation_metrics.csv"
+echo " - Interactive Dashboard: results/dashboard.html (open results/dashboard.html)"
 echo "======================================================================"

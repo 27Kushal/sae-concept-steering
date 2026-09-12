@@ -47,8 +47,8 @@ Recent work demonstrates that unsupervised dictionary learning via Sparse Autoen
 | **Base Language Model** | GPT-2 small (`d_model = 768`, 12 layers, 117M parameters) |
 | **Target Layer & Hook Point** | Layer 6 residual stream (`blocks.6.hook_resid_post` via `TransformerLens`) |
 | **SAE Expansion Factor** | $8\times$ expansion ($d_{sae} = 8 \times 768 = 6,144$ latent features) |
-| **Local Prototype Scale** | $20,000$ tokens collected from WikiText-2; 200 training steps |
-| **Full Colab Scale** | $10,000,000$ tokens collected from WikiText-103; 10,000 training steps |
+| **Local Prototype Scale** | $20,000$ tokens collected from `NeelNanda/pile-10k`; 200 training steps |
+| **Full Colab Scale** | $10,000,000$ tokens collected from `NeelNanda/pile-10k`; 10,000 training steps |
 | **Target Concepts** | Python Code Syntax (`python_code`), Emotional Polarity (`sentiment`), Formality |
 | **Comparative Baseline** | Difference-of-Means steering vector ($\hat{v}_{diff} = (\mu^+ - \mu^-) / \|\mu^+ - \mu^-\|_2$) |
 | **Independent Judges** | Python AST & keyword parser, sentiment polarity metric, formality marker density |
@@ -106,7 +106,13 @@ Latent-concept-steering-sae/
 │   ├── 02_train_sae.py            # SAE training CLI
 │   ├── 03_interpret_features.py   # Systematic interpretation CLI
 │   ├── 04_steer_and_evaluate.py   # Steering & quantitative evaluation CLI
+│   ├── export_visualizer.py       # Standalone HTML dashboard generator
 │   └── run_local_pipeline.sh      # End-to-end local dry run script
+├── results/
+│   ├── dashboard.html             # Standalone interactive dark-mode web explorer
+│   ├── feature_interpretability_report.json # 100 sampled features analysis
+│   ├── evaluation_metrics.csv     # Detailed steering benchmark metrics
+│   └── evaluation_metrics_summary.csv # Grouped comparative evaluation summary
 ├── notebooks/
 │   └── colab_sae_pipeline.ipynb   # Complete turnkey Google Colab notebook
 ├── tests/                         # Mathematical & unit test suite
