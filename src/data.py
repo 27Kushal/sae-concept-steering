@@ -26,37 +26,56 @@ def is_network_available(timeout: float = 0.5) -> bool:
 
 
 def get_text_dataset(config: DataCollectionConfig) -> Generator[str, None, None]:
-    """Streams text documents from Hugging Face datasets with local fallback."""
+    """Streams text documents from Hugging Face datasets with robust fallback."""
+    candidate_datasets = [
+        (config.dataset_name, config.dataset_config),
+        ("NeelNanda/pile-10k", None),
+        ("monology/pile-uncopyrighted", None),
+    ]
+
     if is_network_available():
-        try:
-            from datasets import load_dataset
-            ds = load_dataset(
-                config.dataset_name,
-                config.dataset_config,
-                split=config.split,
-                streaming=True,
-            )
-            for row in ds:
-                text = row.get("text", "")
-                if len(text.strip()) > 50:
-                    yield text
-            return
-        except Exception as e:
-            logger.warning(f"Could not stream {config.dataset_name}: {e}. Using fallback corpus.")
-    else:
-        logger.info("Offline mode detected: using built-in reference corpus.")
-        # Fallback text generator for offline/quick testing
-        sample_corpus = [
-            "Sparse autoencoders decompose language model activations into interpretable features.",
-            "Mechanistic interpretability aims to reverse engineer the computational graph of neural networks.",
-            "Python is a versatile programming language widely used in data science and machine learning.",
-            "Activation steering allows steering generation by intervening on the residual stream.",
-            "Linear representations in neural networks exhibit superposition due to limited feature capacity.",
-            "Transformers utilize self-attention mechanisms to capture long-range contextual dependencies.",
-            "Monosemanticity refers to neurons or features having single, well-defined conceptual meanings.",
-            "Residual streams act as a shared communication channel across all transformer attention blocks.",
-        ] * 200
-        for text in sample_corpus:
+        for d_name, d_cfg in candidate_datasets:
+            if not d_name:
+                continue
+            try:
+                from datasets import load_dataset
+                kwargs = {"split": config.split, "streaming": True}
+                if d_cfg:
+                    ds = load_dataset(d_name, d_cfg, **kwargs)
+                else:
+                    ds = load_dataset(d_name, **kwargs)
+
+                iterator = iter(ds)
+                first_row = next(iterator)
+                first_text = first_row.get("text") or first_row.get("content", "")
+                if len(first_text.strip()) > 50:
+                    yield first_text
+
+                for row in iterator:
+                    text = row.get("text") or row.get("content", "")
+                    if len(text.strip()) > 50:
+                        yield text
+                return
+            except Exception as e:
+                logger.warning(f"Could not load dataset '{d_name}': {e}")
+
+    logger.warning("Streaming from built-in multi-domain text corpus fallback.")
+    fallback_corpus = [
+        "Sparse autoencoders decompose language model activations into interpretable features.",
+        "Mechanistic interpretability aims to reverse engineer the computational graph of neural networks.",
+        "Python is a versatile programming language widely used in data science and machine learning.",
+        "Activation steering allows steering generation by intervening on the residual stream.",
+        "Linear representations in neural networks exhibit superposition due to limited feature capacity.",
+        "Transformers utilize self-attention mechanisms to capture long-range contextual dependencies.",
+        "Monosemanticity refers to neurons or features having single, well-defined conceptual meanings.",
+        "Residual streams act as a shared communication channel across all transformer attention blocks.",
+        "def quicksort(arr):\n    if len(arr) <= 1: return arr\n    pivot = arr[len(arr) // 2]\n    return [x for x in arr if x < pivot] + [x for x in arr if x == pivot] + [x for x in arr if x > pivot]",
+        "Artificial neural networks are computational systems loosely modeled on biological brains.",
+    ] * 50
+
+    # Yield in a loop so consumer never encounters an unexpected StopIteration
+    while True:
+        for text in fallback_corpus:
             yield text
 
 

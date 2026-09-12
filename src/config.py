@@ -62,8 +62,8 @@ class SAEArchitectureConfig:
 @dataclass
 class DataCollectionConfig:
     """Settings for collecting and sharding residual stream activations."""
-    dataset_name: str = "wikitext"
-    dataset_config: str = "wikitext-2-raw-v1"
+    dataset_name: str = "NeelNanda/pile-10k"
+    dataset_config: Optional[str] = None
     split: str = "train"
     context_length: int = 256
     batch_size: int = 16
@@ -135,8 +135,8 @@ class ProjectConfig:
                     l1_coefficient=3e-4,
                 ),
                 data=DataCollectionConfig(
-                    dataset_name="wikitext",
-                    dataset_config="wikitext-2-raw-v1",
+                    dataset_name="NeelNanda/pile-10k",
+                    dataset_config=None,
                     split="train",
                     context_length=128,
                     batch_size=8,
@@ -178,8 +178,8 @@ class ProjectConfig:
                     l1_coefficient=3e-4,
                 ),
                 data=DataCollectionConfig(
-                    dataset_name="wikitext",
-                    dataset_config="wikitext-103-raw-v1",
+                    dataset_name="NeelNanda/pile-10k",
+                    dataset_config=None,
                     split="train",
                     context_length=256,
                     batch_size=32,

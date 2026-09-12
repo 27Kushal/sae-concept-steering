@@ -16,8 +16,8 @@
     "init_decoder_norm": 1.0
   },
   "data": {
-    "dataset_name": "wikitext",
-    "dataset_config": "wikitext-103-raw-v1",
+    "dataset_name": "NeelNanda/pile-10k",
+    "dataset_config": null,
     "split": "train",
     "context_length": 256,
     "batch_size": 32,
