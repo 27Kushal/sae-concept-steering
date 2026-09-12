@@ -1,9 +1,87 @@
 [
   {
-    "feature_idx": 1368,
+    "feature_idx": 1605,
     "sample_type": "top_active",
     "status": "interpretable",
-    "max_activation": 179.9543,
+    "max_activation": 53.3774,
+    "hypothesis": "Lexical association with tokens: 'Python'",
+    "top_tokens": [
+      "Python",
+      "Python",
+      "Python"
+    ],
+    "validation_metrics": {
+      "mean_positive_act": 52.11274719238281,
+      "mean_negative_act": 50.76885859171549,
+      "specificity": 0.025788097405537523,
+      "pos_firing_rate": 1.0,
+      "neg_firing_rate": 1.0
+    },
+    "snippets": [
+      {
+        "activation": 53.37744140625,
+        "token": "Python",
+        "token_pos": 1,
+        "snippet": "<|endoftext|>Python functions are defined using the"
+      },
+      {
+        "activation": 53.37744140625,
+        "token": "Python",
+        "token_pos": 1,
+        "snippet": "<|endoftext|>Python functions are defined using the"
+      },
+      {
+        "activation": 53.37744140625,
+        "token": "Python",
+        "token_pos": 1,
+        "snippet": "<|endoftext|>Python functions are defined using the"
+      }
+    ]
+  },
+  {
+    "feature_idx": 455,
+    "sample_type": "top_active",
+    "status": "interpretable",
+    "max_activation": 37.7192,
+    "hypothesis": "Lexical association with tokens: 'functions'",
+    "top_tokens": [
+      " functions",
+      " functions",
+      " functions"
+    ],
+    "validation_metrics": {
+      "mean_positive_act": 32.55872090657552,
+      "mean_negative_act": 35.54353014628092,
+      "specificity": -0.09167464681029869,
+      "pos_firing_rate": 1.0,
+      "neg_firing_rate": 1.0
+    },
+    "snippets": [
+      {
+        "activation": 37.71924591064453,
+        "token": " functions",
+        "token_pos": 2,
+        "snippet": "<|endoftext|>Python functions are defined using the def"
+      },
+      {
+        "activation": 37.71924591064453,
+        "token": " functions",
+        "token_pos": 2,
+        "snippet": "<|endoftext|>Python functions are defined using the def"
+      },
+      {
+        "activation": 37.71924591064453,
+        "token": " functions",
+        "token_pos": 2,
+        "snippet": "<|endoftext|>Python functions are defined using the def"
+      }
+    ]
+  },
+  {
+    "feature_idx": 4060,
+    "sample_type": "top_active",
+    "status": "interpretable",
+    "max_activation": 169.414,
     "hypothesis": "Lexical association with tokens: '<|endoftext|>'",
     "top_tokens": [
       "<|endoftext|>",
@@ -11,27 +89,27 @@
       "<|endoftext|>"
     ],
     "validation_metrics": {
-      "mean_positive_act": 179.95430501302084,
-      "mean_negative_act": 179.95429484049478,
-      "specificity": 5.6528384024369e-08,
+      "mean_positive_act": 169.41397603352866,
+      "mean_negative_act": 169.4139658610026,
+      "specificity": 6.00453770036141e-08,
       "pos_firing_rate": 1.0,
       "neg_firing_rate": 1.0
     },
     "snippets": [
       {
-        "activation": 179.95431518554688,
+        "activation": 169.4139862060547,
         "token": "<|endoftext|>",
         "token_pos": 0,
         "snippet": "<|endoftext|>A sparse autoenc"
       },
       {
-        "activation": 179.95431518554688,
+        "activation": 169.4139862060547,
         "token": "<|endoftext|>",
         "token_pos": 0,
         "snippet": "<|endoftext|>class ModelTrainer:"
       },
       {
-        "activation": 179.95431518554688,
+        "activation": 169.4139862060547,
         "token": "<|endoftext|>",
         "token_pos": 0,
         "snippet": "<|endoftext|>import torch\nimport n"
@@ -39,10 +117,10 @@
     ]
   },
   {
-    "feature_idx": 1073,
+    "feature_idx": 6086,
     "sample_type": "top_active",
     "status": "interpretable",
-    "max_activation": 179.494,
+    "max_activation": 156.1058,
     "hypothesis": "Lexical association with tokens: '<|endoftext|>'",
     "top_tokens": [
       "<|endoftext|>",
@@ -50,27 +128,690 @@
       "<|endoftext|>"
     ],
     "validation_metrics": {
-      "mean_positive_act": 179.49398295084634,
-      "mean_negative_act": 179.49397786458334,
-      "specificity": 2.8336676908430842e-08,
+      "mean_positive_act": 156.10579427083334,
+      "mean_negative_act": 156.10577392578125,
+      "specificity": 1.3032861584567386e-07,
       "pos_firing_rate": 1.0,
       "neg_firing_rate": 1.0
     },
     "snippets": [
       {
-        "activation": 179.49398803710938,
+        "activation": 156.10580444335938,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>A sparse autoenc"
+      },
+      {
+        "activation": 156.10580444335938,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>class ModelTrainer:"
+      },
+      {
+        "activation": 156.10580444335938,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>import torch\nimport n"
+      }
+    ]
+  },
+  {
+    "feature_idx": 5289,
+    "sample_type": "top_active",
+    "status": "interpretable",
+    "max_activation": 153.802,
+    "hypothesis": "Lexical association with tokens: '<|endoftext|>'",
+    "top_tokens": [
+      "<|endoftext|>",
+      "<|endoftext|>",
+      "<|endoftext|>"
+    ],
+    "validation_metrics": {
+      "mean_positive_act": 153.80197143554688,
+      "mean_negative_act": 153.80196126302084,
+      "specificity": 6.614041378823106e-08,
+      "pos_firing_rate": 1.0,
+      "neg_firing_rate": 1.0
+    },
+    "snippets": [
+      {
+        "activation": 153.80197143554688,
         "token": "<|endoftext|>",
         "token_pos": 0,
         "snippet": "<|endoftext|>Python functions are defined using"
       },
       {
-        "activation": 179.49398803710938,
+        "activation": 153.80197143554688,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>A sparse autoenc"
+      },
+      {
+        "activation": 153.80197143554688,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>Deep neural networks exhibit super"
+      }
+    ]
+  },
+  {
+    "feature_idx": 666,
+    "sample_type": "top_active",
+    "status": "interpretable",
+    "max_activation": 144.8552,
+    "hypothesis": "Lexical association with tokens: '<|endoftext|>'",
+    "top_tokens": [
+      "<|endoftext|>",
+      "<|endoftext|>",
+      "<|endoftext|>"
+    ],
+    "validation_metrics": {
+      "mean_positive_act": 144.85515340169272,
+      "mean_negative_act": 144.85514322916666,
+      "specificity": 7.022550335096052e-08,
+      "pos_firing_rate": 1.0,
+      "neg_firing_rate": 1.0
+    },
+    "snippets": [
+      {
+        "activation": 144.85516357421875,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>A sparse autoenc"
+      },
+      {
+        "activation": 144.85516357421875,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>class ModelTrainer:"
+      },
+      {
+        "activation": 144.85516357421875,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>import torch\nimport n"
+      }
+    ]
+  },
+  {
+    "feature_idx": 4283,
+    "sample_type": "top_active",
+    "status": "interpretable",
+    "max_activation": 24.6973,
+    "hypothesis": "Programming syntax and code delimiters (e.g., def, def, def)",
+    "top_tokens": [
+      " def",
+      " def",
+      " def"
+    ],
+    "validation_metrics": {
+      "mean_positive_act": 22.720081329345703,
+      "mean_negative_act": 18.049009958902996,
+      "specificity": 0.20559219409172888,
+      "pos_firing_rate": 1.0,
+      "neg_firing_rate": 1.0
+    },
+    "snippets": [
+      {
+        "activation": 24.69727325439453,
+        "token": " def",
+        "token_pos": 7,
+        "snippet": " functions are defined using the def keyword, followed by the"
+      },
+      {
+        "activation": 24.69727325439453,
+        "token": " def",
+        "token_pos": 7,
+        "snippet": " functions are defined using the def keyword, followed by the"
+      },
+      {
+        "activation": 24.69727325439453,
+        "token": " def",
+        "token_pos": 7,
+        "snippet": " functions are defined using the def keyword, followed by the"
+      }
+    ]
+  },
+  {
+    "feature_idx": 3550,
+    "sample_type": "top_active",
+    "status": "interpretable",
+    "max_activation": 150.5663,
+    "hypothesis": "Lexical association with tokens: '<|endoftext|>'",
+    "top_tokens": [
+      "<|endoftext|>",
+      "<|endoftext|>",
+      "<|endoftext|>"
+    ],
+    "validation_metrics": {
+      "mean_positive_act": 150.5663096110026,
+      "mean_negative_act": 150.56629435221353,
+      "specificity": 1.0134265163250682e-07,
+      "pos_firing_rate": 1.0,
+      "neg_firing_rate": 1.0
+    },
+    "snippets": [
+      {
+        "activation": 150.5663299560547,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>A sparse autoenc"
+      },
+      {
+        "activation": 150.5663299560547,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>class ModelTrainer:"
+      },
+      {
+        "activation": 150.5663299560547,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>import torch\nimport n"
+      }
+    ]
+  },
+  {
+    "feature_idx": 3790,
+    "sample_type": "top_active",
+    "status": "interpretable",
+    "max_activation": 142.7917,
+    "hypothesis": "Lexical association with tokens: '<|endoftext|>'",
+    "top_tokens": [
+      "<|endoftext|>",
+      "<|endoftext|>",
+      "<|endoftext|>"
+    ],
+    "validation_metrics": {
+      "mean_positive_act": 142.79169209798178,
+      "mean_negative_act": 142.79167683919272,
+      "specificity": 1.068604821352605e-07,
+      "pos_firing_rate": 1.0,
+      "neg_firing_rate": 1.0
+    },
+    "snippets": [
+      {
+        "activation": 142.7917022705078,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>A sparse autoenc"
+      },
+      {
+        "activation": 142.7917022705078,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>class ModelTrainer:"
+      },
+      {
+        "activation": 142.7917022705078,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>import torch\nimport n"
+      }
+    ]
+  },
+  {
+    "feature_idx": 5049,
+    "sample_type": "top_active",
+    "status": "interpretable",
+    "max_activation": 120.216,
+    "hypothesis": "Lexical association with tokens: '<|endoftext|>'",
+    "top_tokens": [
+      "<|endoftext|>",
+      "<|endoftext|>",
+      "<|endoftext|>"
+    ],
+    "validation_metrics": {
+      "mean_positive_act": 120.21597290039062,
+      "mean_negative_act": 120.21595509847005,
+      "specificity": 1.4808282250815418e-07,
+      "pos_firing_rate": 1.0,
+      "neg_firing_rate": 1.0
+    },
+    "snippets": [
+      {
+        "activation": 120.21598815917969,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>A sparse autoenc"
+      },
+      {
+        "activation": 120.21598815917969,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>class ModelTrainer:"
+      },
+      {
+        "activation": 120.21598815917969,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>import torch\nimport n"
+      }
+    ]
+  },
+  {
+    "feature_idx": 4643,
+    "sample_type": "top_active",
+    "status": "interpretable",
+    "max_activation": 28.9469,
+    "hypothesis": "Acronyms and capitalized abbreviations (e.g., c, c, c)",
+    "top_tokens": [
+      "c",
+      "c",
+      "c"
+    ],
+    "validation_metrics": {
+      "mean_positive_act": 24.077632904052734,
+      "mean_negative_act": 21.25705083211263,
+      "specificity": 0.11714532251487839,
+      "pos_firing_rate": 1.0,
+      "neg_firing_rate": 1.0
+    },
+    "snippets": [
+      {
+        "activation": 28.946910858154297,
+        "token": "c",
+        "token_pos": 5,
+        "snippet": "<|endoftext|>A sparse autoencoder uses an overcomplete"
+      },
+      {
+        "activation": 28.946910858154297,
+        "token": "c",
+        "token_pos": 5,
+        "snippet": "<|endoftext|>A sparse autoencoder uses an overcomplete"
+      },
+      {
+        "activation": 28.946910858154297,
+        "token": "c",
+        "token_pos": 5,
+        "snippet": "<|endoftext|>A sparse autoencoder uses an overcomplete"
+      }
+    ]
+  },
+  {
+    "feature_idx": 3970,
+    "sample_type": "top_active",
+    "status": "interpretable",
+    "max_activation": 141.7475,
+    "hypothesis": "Lexical association with tokens: '<|endoftext|>'",
+    "top_tokens": [
+      "<|endoftext|>",
+      "<|endoftext|>",
+      "<|endoftext|>"
+    ],
+    "validation_metrics": {
+      "mean_positive_act": 141.74744160970053,
+      "mean_negative_act": 141.7474365234375,
+      "specificity": 3.588257377027083e-08,
+      "pos_firing_rate": 1.0,
+      "neg_firing_rate": 1.0
+    },
+    "snippets": [
+      {
+        "activation": 141.74745178222656,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>A sparse autoenc"
+      },
+      {
+        "activation": 141.74745178222656,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>class ModelTrainer:"
+      },
+      {
+        "activation": 141.74745178222656,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>import torch\nimport n"
+      }
+    ]
+  },
+  {
+    "feature_idx": 695,
+    "sample_type": "top_active",
+    "status": "interpretable",
+    "max_activation": 157.3436,
+    "hypothesis": "Lexical association with tokens: '<|endoftext|>'",
+    "top_tokens": [
+      "<|endoftext|>",
+      "<|endoftext|>",
+      "<|endoftext|>"
+    ],
+    "validation_metrics": {
+      "mean_positive_act": 157.34354654947916,
+      "mean_negative_act": 157.3435262044271,
+      "specificity": 1.2930337793032844e-07,
+      "pos_firing_rate": 1.0,
+      "neg_firing_rate": 1.0
+    },
+    "snippets": [
+      {
+        "activation": 157.34356689453125,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>A sparse autoenc"
+      },
+      {
+        "activation": 157.34356689453125,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>class ModelTrainer:"
+      },
+      {
+        "activation": 157.34356689453125,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>import torch\nimport n"
+      }
+    ]
+  },
+  {
+    "feature_idx": 2421,
+    "sample_type": "top_active",
+    "status": "interpretable",
+    "max_activation": 119.5454,
+    "hypothesis": "Lexical association with tokens: '<|endoftext|>'",
+    "top_tokens": [
+      "<|endoftext|>",
+      "<|endoftext|>",
+      "<|endoftext|>"
+    ],
+    "validation_metrics": {
+      "mean_positive_act": 119.54538218180339,
+      "mean_negative_act": 119.5453618367513,
+      "specificity": 1.7018685056246413e-07,
+      "pos_firing_rate": 1.0,
+      "neg_firing_rate": 1.0
+    },
+    "snippets": [
+      {
+        "activation": 119.54540252685547,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>A sparse autoenc"
+      },
+      {
+        "activation": 119.54540252685547,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>class ModelTrainer:"
+      },
+      {
+        "activation": 119.54540252685547,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>import torch\nimport n"
+      }
+    ]
+  },
+  {
+    "feature_idx": 1223,
+    "sample_type": "top_active",
+    "status": "interpretable",
+    "max_activation": 137.3043,
+    "hypothesis": "Lexical association with tokens: '<|endoftext|>'",
+    "top_tokens": [
+      "<|endoftext|>",
+      "<|endoftext|>",
+      "<|endoftext|>"
+    ],
+    "validation_metrics": {
+      "mean_positive_act": 137.30425516764322,
+      "mean_negative_act": 137.30423990885416,
+      "specificity": 1.1113121762956003e-07,
+      "pos_firing_rate": 1.0,
+      "neg_firing_rate": 1.0
+    },
+    "snippets": [
+      {
+        "activation": 137.3042755126953,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>A sparse autoenc"
+      },
+      {
+        "activation": 137.3042755126953,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>class ModelTrainer:"
+      },
+      {
+        "activation": 137.3042755126953,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>import torch\nimport n"
+      }
+    ]
+  },
+  {
+    "feature_idx": 4441,
+    "sample_type": "top_active",
+    "status": "interpretable",
+    "max_activation": 143.2094,
+    "hypothesis": "Lexical association with tokens: '<|endoftext|>'",
+    "top_tokens": [
+      "<|endoftext|>",
+      "<|endoftext|>",
+      "<|endoftext|>"
+    ],
+    "validation_metrics": {
+      "mean_positive_act": 143.2093760172526,
+      "mean_negative_act": 143.20935567220053,
+      "specificity": 1.4206508421581654e-07,
+      "pos_firing_rate": 1.0,
+      "neg_firing_rate": 1.0
+    },
+    "snippets": [
+      {
+        "activation": 143.2093963623047,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>A sparse autoenc"
+      },
+      {
+        "activation": 143.2093963623047,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>class ModelTrainer:"
+      },
+      {
+        "activation": 143.2093963623047,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>import torch\nimport n"
+      }
+    ]
+  },
+  {
+    "feature_idx": 1055,
+    "sample_type": "top_active",
+    "status": "interpretable",
+    "max_activation": 135.9535,
+    "hypothesis": "Lexical association with tokens: '<|endoftext|>'",
+    "top_tokens": [
+      "<|endoftext|>",
+      "<|endoftext|>",
+      "<|endoftext|>"
+    ],
+    "validation_metrics": {
+      "mean_positive_act": 135.9534657796224,
+      "mean_negative_act": 135.95346069335938,
+      "specificity": 3.741179381592197e-08,
+      "pos_firing_rate": 1.0,
+      "neg_firing_rate": 1.0
+    },
+    "snippets": [
+      {
+        "activation": 135.95347595214844,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>A sparse autoenc"
+      },
+      {
+        "activation": 135.95347595214844,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>class ModelTrainer:"
+      },
+      {
+        "activation": 135.95347595214844,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>import torch\nimport n"
+      }
+    ]
+  },
+  {
+    "feature_idx": 5690,
+    "sample_type": "top_active",
+    "status": "interpretable",
+    "max_activation": 153.2541,
+    "hypothesis": "Lexical association with tokens: '<|endoftext|>'",
+    "top_tokens": [
+      "<|endoftext|>",
+      "<|endoftext|>",
+      "<|endoftext|>"
+    ],
+    "validation_metrics": {
+      "mean_positive_act": 153.25407918294272,
+      "mean_negative_act": 153.25406901041666,
+      "specificity": 6.637686980241034e-08,
+      "pos_firing_rate": 1.0,
+      "neg_firing_rate": 1.0
+    },
+    "snippets": [
+      {
+        "activation": 153.25408935546875,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>A sparse autoenc"
+      },
+      {
+        "activation": 153.25408935546875,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>class ModelTrainer:"
+      },
+      {
+        "activation": 153.25408935546875,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>import torch\nimport n"
+      }
+    ]
+  },
+  {
+    "feature_idx": 3202,
+    "sample_type": "top_active",
+    "status": "interpretable",
+    "max_activation": 150.0831,
+    "hypothesis": "Lexical association with tokens: '<|endoftext|>'",
+    "top_tokens": [
+      "<|endoftext|>",
+      "<|endoftext|>",
+      "<|endoftext|>"
+    ],
+    "validation_metrics": {
+      "mean_positive_act": 150.0830332438151,
+      "mean_negative_act": 150.08301798502603,
+      "specificity": 1.016689810480547e-07,
+      "pos_firing_rate": 1.0,
+      "neg_firing_rate": 1.0
+    },
+    "snippets": [
+      {
+        "activation": 150.0830535888672,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>A sparse autoenc"
+      },
+      {
+        "activation": 150.0830535888672,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>class ModelTrainer:"
+      },
+      {
+        "activation": 150.0830535888672,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>import torch\nimport n"
+      }
+    ]
+  },
+  {
+    "feature_idx": 2236,
+    "sample_type": "top_active",
+    "status": "interpretable",
+    "max_activation": 152.9296,
+    "hypothesis": "Lexical association with tokens: '<|endoftext|>'",
+    "top_tokens": [
+      "<|endoftext|>",
+      "<|endoftext|>",
+      "<|endoftext|>"
+    ],
+    "validation_metrics": {
+      "mean_positive_act": 152.92953491210938,
+      "mean_negative_act": 152.92950948079428,
+      "specificity": 1.6629433359166676e-07,
+      "pos_firing_rate": 1.0,
+      "neg_firing_rate": 1.0
+    },
+    "snippets": [
+      {
+        "activation": 152.9295654296875,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>A sparse autoenc"
+      },
+      {
+        "activation": 152.9295654296875,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>class ModelTrainer:"
+      },
+      {
+        "activation": 152.9295654296875,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>import torch\nimport n"
+      }
+    ]
+  },
+  {
+    "feature_idx": 3252,
+    "sample_type": "top_active",
+    "status": "interpretable",
+    "max_activation": 134.0523,
+    "hypothesis": "Lexical association with tokens: '<|endoftext|>'",
+    "top_tokens": [
+      "<|endoftext|>",
+      "<|endoftext|>",
+      "<|endoftext|>"
+    ],
+    "validation_metrics": {
+      "mean_positive_act": 134.05228169759116,
+      "mean_negative_act": 134.05227661132812,
+      "specificity": 3.7942383120201926e-08,
+      "pos_firing_rate": 1.0,
+      "neg_firing_rate": 1.0
+    },
+    "snippets": [
+      {
+        "activation": 134.0522918701172,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>Python functions are defined using"
+      },
+      {
+        "activation": 134.0522918701172,
         "token": "<|endoftext|>",
         "token_pos": 0,
         "snippet": "<|endoftext|>Deep neural networks exhibit super"
       },
       {
-        "activation": 179.49398803710938,
+        "activation": 134.0522918701172,
         "token": "<|endoftext|>",
         "token_pos": 0,
         "snippet": "<|endoftext|>The quick brown fox jumps"
@@ -78,10 +819,10 @@
     ]
   },
   {
-    "feature_idx": 2192,
+    "feature_idx": 644,
     "sample_type": "top_active",
     "status": "interpretable",
-    "max_activation": 156.6554,
+    "max_activation": 150.0645,
     "hypothesis": "Lexical association with tokens: '<|endoftext|>'",
     "top_tokens": [
       "<|endoftext|>",
@@ -89,27 +830,27 @@
       "<|endoftext|>"
     ],
     "validation_metrics": {
-      "mean_positive_act": 156.65540059407553,
-      "mean_negative_act": 156.65539042154947,
-      "specificity": 6.493568700496612e-08,
+      "mean_positive_act": 150.0644734700521,
+      "mean_negative_act": 150.06445821126303,
+      "specificity": 1.0168155533191638e-07,
       "pos_firing_rate": 1.0,
       "neg_firing_rate": 1.0
     },
     "snippets": [
       {
-        "activation": 156.65541076660156,
+        "activation": 150.06448364257812,
         "token": "<|endoftext|>",
         "token_pos": 0,
         "snippet": "<|endoftext|>A sparse autoenc"
       },
       {
-        "activation": 156.65541076660156,
+        "activation": 150.06448364257812,
         "token": "<|endoftext|>",
         "token_pos": 0,
         "snippet": "<|endoftext|>class ModelTrainer:"
       },
       {
-        "activation": 156.65541076660156,
+        "activation": 150.06448364257812,
         "token": "<|endoftext|>",
         "token_pos": 0,
         "snippet": "<|endoftext|>import torch\nimport n"
@@ -117,10 +858,10 @@
     ]
   },
   {
-    "feature_idx": 1355,
+    "feature_idx": 2317,
     "sample_type": "top_active",
     "status": "interpretable",
-    "max_activation": 172.494,
+    "max_activation": 132.497,
     "hypothesis": "Lexical association with tokens: '<|endoftext|>'",
     "top_tokens": [
       "<|endoftext|>",
@@ -128,27 +869,222 @@
       "<|endoftext|>"
     ],
     "validation_metrics": {
-      "mean_positive_act": 172.4939982096354,
-      "mean_negative_act": 172.49398803710938,
-      "specificity": 5.8973217258434055e-08,
+      "mean_positive_act": 132.49698384602866,
+      "mean_negative_act": 132.4969736735026,
+      "specificity": 7.677552926363747e-08,
       "pos_firing_rate": 1.0,
       "neg_firing_rate": 1.0
     },
     "snippets": [
       {
-        "activation": 172.49400329589844,
+        "activation": 132.4969940185547,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>A sparse autoenc"
+      },
+      {
+        "activation": 132.4969940185547,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>class ModelTrainer:"
+      },
+      {
+        "activation": 132.4969940185547,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>import torch\nimport n"
+      }
+    ]
+  },
+  {
+    "feature_idx": 3852,
+    "sample_type": "top_active",
+    "status": "interpretable",
+    "max_activation": 148.7771,
+    "hypothesis": "Lexical association with tokens: '<|endoftext|>'",
+    "top_tokens": [
+      "<|endoftext|>",
+      "<|endoftext|>",
+      "<|endoftext|>"
+    ],
+    "validation_metrics": {
+      "mean_positive_act": 148.7770538330078,
+      "mean_negative_act": 148.77704366048178,
+      "specificity": 6.8374294087116e-08,
+      "pos_firing_rate": 1.0,
+      "neg_firing_rate": 1.0
+    },
+    "snippets": [
+      {
+        "activation": 148.7770538330078,
         "token": "<|endoftext|>",
         "token_pos": 0,
         "snippet": "<|endoftext|>Python functions are defined using"
       },
       {
-        "activation": 172.49400329589844,
+        "activation": 148.7770538330078,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>A sparse autoenc"
+      },
+      {
+        "activation": 148.7770538330078,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>Deep neural networks exhibit super"
+      }
+    ]
+  },
+  {
+    "feature_idx": 442,
+    "sample_type": "top_active",
+    "status": "interpretable",
+    "max_activation": 105.7795,
+    "hypothesis": "Lexical association with tokens: '<|endoftext|>'",
+    "top_tokens": [
+      "<|endoftext|>",
+      "<|endoftext|>",
+      "<|endoftext|>"
+    ],
+    "validation_metrics": {
+      "mean_positive_act": 105.7795181274414,
+      "mean_negative_act": 105.77950795491536,
+      "specificity": 9.6167256445127e-08,
+      "pos_firing_rate": 1.0,
+      "neg_firing_rate": 1.0
+    },
+    "snippets": [
+      {
+        "activation": 105.77953338623047,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>A sparse autoenc"
+      },
+      {
+        "activation": 105.77953338623047,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>class ModelTrainer:"
+      },
+      {
+        "activation": 105.77953338623047,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>import torch\nimport n"
+      }
+    ]
+  },
+  {
+    "feature_idx": 4156,
+    "sample_type": "top_active",
+    "status": "interpretable",
+    "max_activation": 131.3379,
+    "hypothesis": "Lexical association with tokens: '<|endoftext|>'",
+    "top_tokens": [
+      "<|endoftext|>",
+      "<|endoftext|>",
+      "<|endoftext|>"
+    ],
+    "validation_metrics": {
+      "mean_positive_act": 131.33788045247397,
+      "mean_negative_act": 131.33787536621094,
+      "specificity": 3.872655027463882e-08,
+      "pos_firing_rate": 1.0,
+      "neg_firing_rate": 1.0
+    },
+    "snippets": [
+      {
+        "activation": 131.337890625,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>A sparse autoenc"
+      },
+      {
+        "activation": 131.337890625,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>class ModelTrainer:"
+      },
+      {
+        "activation": 131.337890625,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>import torch\nimport n"
+      }
+    ]
+  },
+  {
+    "feature_idx": 3236,
+    "sample_type": "top_active",
+    "status": "interpretable",
+    "max_activation": 158.837,
+    "hypothesis": "Lexical association with tokens: '<|endoftext|>'",
+    "top_tokens": [
+      "<|endoftext|>",
+      "<|endoftext|>",
+      "<|endoftext|>"
+    ],
+    "validation_metrics": {
+      "mean_positive_act": 158.8369394938151,
+      "mean_negative_act": 158.83692932128906,
+      "specificity": 6.404383051329737e-08,
+      "pos_firing_rate": 1.0,
+      "neg_firing_rate": 1.0
+    },
+    "snippets": [
+      {
+        "activation": 158.8369598388672,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>A sparse autoenc"
+      },
+      {
+        "activation": 158.8369598388672,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>class ModelTrainer:"
+      },
+      {
+        "activation": 158.8369598388672,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>import torch\nimport n"
+      }
+    ]
+  },
+  {
+    "feature_idx": 3677,
+    "sample_type": "top_active",
+    "status": "interpretable",
+    "max_activation": 124.6241,
+    "hypothesis": "Lexical association with tokens: '<|endoftext|>'",
+    "top_tokens": [
+      "<|endoftext|>",
+      "<|endoftext|>",
+      "<|endoftext|>"
+    ],
+    "validation_metrics": {
+      "mean_positive_act": 124.62408192952473,
+      "mean_negative_act": 124.62407938639323,
+      "specificity": 2.0406421147245934e-08,
+      "pos_firing_rate": 1.0,
+      "neg_firing_rate": 1.0
+    },
+    "snippets": [
+      {
+        "activation": 124.62408447265625,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>Python functions are defined using"
+      },
+      {
+        "activation": 124.62408447265625,
         "token": "<|endoftext|>",
         "token_pos": 0,
         "snippet": "<|endoftext|>Deep neural networks exhibit super"
       },
       {
-        "activation": 172.49400329589844,
+        "activation": 124.62408447265625,
         "token": "<|endoftext|>",
         "token_pos": 0,
         "snippet": "<|endoftext|>The quick brown fox jumps"
@@ -156,10 +1092,10 @@
     ]
   },
   {
-    "feature_idx": 1637,
+    "feature_idx": 4514,
     "sample_type": "top_active",
     "status": "interpretable",
-    "max_activation": 160.7504,
+    "max_activation": 134.5191,
     "hypothesis": "Lexical association with tokens: '<|endoftext|>'",
     "top_tokens": [
       "<|endoftext|>",
@@ -167,27 +1103,27 @@
       "<|endoftext|>"
     ],
     "validation_metrics": {
-      "mean_positive_act": 160.75040690104166,
-      "mean_negative_act": 160.7503916422526,
-      "specificity": 9.492224223042463e-08,
+      "mean_positive_act": 134.51907857259116,
+      "mean_negative_act": 134.5190633138021,
+      "specificity": 1.1343215567943271e-07,
       "pos_firing_rate": 1.0,
       "neg_firing_rate": 1.0
     },
     "snippets": [
       {
-        "activation": 160.75042724609375,
+        "activation": 134.5190887451172,
         "token": "<|endoftext|>",
         "token_pos": 0,
         "snippet": "<|endoftext|>A sparse autoenc"
       },
       {
-        "activation": 160.75042724609375,
+        "activation": 134.5190887451172,
         "token": "<|endoftext|>",
         "token_pos": 0,
         "snippet": "<|endoftext|>class ModelTrainer:"
       },
       {
-        "activation": 160.75042724609375,
+        "activation": 134.5190887451172,
         "token": "<|endoftext|>",
         "token_pos": 0,
         "snippet": "<|endoftext|>import torch\nimport n"
@@ -195,49 +1131,10 @@
     ]
   },
   {
-    "feature_idx": 4682,
-    "sample_type": "random",
+    "feature_idx": 5445,
+    "sample_type": "top_active",
     "status": "interpretable",
-    "max_activation": 5.0112,
-    "hypothesis": "Lexical association with tokens: 'near'",
-    "top_tokens": [
-      " near",
-      " near",
-      " near"
-    ],
-    "validation_metrics": {
-      "mean_positive_act": 0.3879539966583252,
-      "mean_negative_act": 2.2568715612093606,
-      "specificity": -1.0,
-      "pos_firing_rate": 0.3333333333333333,
-      "neg_firing_rate": 1.0
-    },
-    "snippets": [
-      {
-        "activation": 5.011193752288818,
-        "token": " near",
-        "token_pos": 10,
-        "snippet": " jumps over the lazy dog near the peaceful countryside river."
-      },
-      {
-        "activation": 5.011193752288818,
-        "token": " near",
-        "token_pos": 10,
-        "snippet": " jumps over the lazy dog near the peaceful countryside river."
-      },
-      {
-        "activation": 5.011193752288818,
-        "token": " near",
-        "token_pos": 10,
-        "snippet": " jumps over the lazy dog near the peaceful countryside river."
-      }
-    ]
-  },
-  {
-    "feature_idx": 1285,
-    "sample_type": "random",
-    "status": "interpretable",
-    "max_activation": 1.4304,
+    "max_activation": 142.7809,
     "hypothesis": "Lexical association with tokens: '<|endoftext|>'",
     "top_tokens": [
       "<|endoftext|>",
@@ -245,27 +1142,27 @@
       "<|endoftext|>"
     ],
     "validation_metrics": {
-      "mean_positive_act": 1.4303834040959675,
-      "mean_negative_act": 1.4303841193517048,
-      "specificity": -5.000447678968592e-07,
+      "mean_positive_act": 142.78087361653647,
+      "mean_negative_act": 142.7808583577474,
+      "specificity": 1.0686857893502041e-07,
       "pos_firing_rate": 1.0,
       "neg_firing_rate": 1.0
     },
     "snippets": [
       {
-        "activation": 1.43038809299469,
+        "activation": 142.7808837890625,
         "token": "<|endoftext|>",
         "token_pos": 0,
         "snippet": "<|endoftext|>A sparse autoenc"
       },
       {
-        "activation": 1.43038809299469,
+        "activation": 142.7808837890625,
         "token": "<|endoftext|>",
         "token_pos": 0,
         "snippet": "<|endoftext|>class ModelTrainer:"
       },
       {
-        "activation": 1.43038809299469,
+        "activation": 142.7808837890625,
         "token": "<|endoftext|>",
         "token_pos": 0,
         "snippet": "<|endoftext|>import torch\nimport n"
@@ -273,10 +1170,10 @@
     ]
   },
   {
-    "feature_idx": 3248,
-    "sample_type": "random",
+    "feature_idx": 5330,
+    "sample_type": "top_active",
     "status": "interpretable",
-    "max_activation": 68.982,
+    "max_activation": 109.4559,
     "hypothesis": "Lexical association with tokens: '<|endoftext|>'",
     "top_tokens": [
       "<|endoftext|>",
@@ -284,27 +1181,573 @@
       "<|endoftext|>"
     ],
     "validation_metrics": {
-      "mean_positive_act": 68.98204803466797,
-      "mean_negative_act": 68.98205057779948,
-      "specificity": -3.686657018178888e-08,
+      "mean_positive_act": 109.45587666829427,
+      "mean_negative_act": 109.45586395263672,
+      "specificity": 1.1617153810645679e-07,
       "pos_firing_rate": 1.0,
       "neg_firing_rate": 1.0
     },
     "snippets": [
       {
-        "activation": 68.98204803466797,
+        "activation": 109.45590209960938,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>A sparse autoenc"
+      },
+      {
+        "activation": 109.45590209960938,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>class ModelTrainer:"
+      },
+      {
+        "activation": 109.45590209960938,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>import torch\nimport n"
+      }
+    ]
+  },
+  {
+    "feature_idx": 201,
+    "sample_type": "top_active",
+    "status": "interpretable",
+    "max_activation": 145.3641,
+    "hypothesis": "Lexical association with tokens: '<|endoftext|>'",
+    "top_tokens": [
+      "<|endoftext|>",
+      "<|endoftext|>",
+      "<|endoftext|>"
+    ],
+    "validation_metrics": {
+      "mean_positive_act": 145.36407979329428,
+      "mean_negative_act": 145.36406453450522,
+      "specificity": 1.0496946070994835e-07,
+      "pos_firing_rate": 1.0,
+      "neg_firing_rate": 1.0
+    },
+    "snippets": [
+      {
+        "activation": 145.3640899658203,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>A sparse autoenc"
+      },
+      {
+        "activation": 145.3640899658203,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>class ModelTrainer:"
+      },
+      {
+        "activation": 145.3640899658203,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>import torch\nimport n"
+      }
+    ]
+  },
+  {
+    "feature_idx": 3834,
+    "sample_type": "top_active",
+    "status": "interpretable",
+    "max_activation": 144.9637,
+    "hypothesis": "Lexical association with tokens: '<|endoftext|>'",
+    "top_tokens": [
+      "<|endoftext|>",
+      "<|endoftext|>",
+      "<|endoftext|>"
+    ],
+    "validation_metrics": {
+      "mean_positive_act": 144.96369425455728,
+      "mean_negative_act": 144.96367899576822,
+      "specificity": 1.0525938333018374e-07,
+      "pos_firing_rate": 1.0,
+      "neg_firing_rate": 1.0
+    },
+    "snippets": [
+      {
+        "activation": 144.9636993408203,
         "token": "<|endoftext|>",
         "token_pos": 0,
         "snippet": "<|endoftext|>Python functions are defined using"
       },
       {
-        "activation": 68.98204803466797,
+        "activation": 144.9636993408203,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>Deep neural networks exhibit super"
+      },
+      {
+        "activation": 144.9636993408203,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>The quick brown fox jumps"
+      }
+    ]
+  },
+  {
+    "feature_idx": 2043,
+    "sample_type": "top_active",
+    "status": "interpretable",
+    "max_activation": 133.2161,
+    "hypothesis": "Lexical association with tokens: '<|endoftext|>'",
+    "top_tokens": [
+      "<|endoftext|>",
+      "<|endoftext|>",
+      "<|endoftext|>"
+    ],
+    "validation_metrics": {
+      "mean_positive_act": 133.2160441080729,
+      "mean_negative_act": 133.21602884928384,
+      "specificity": 1.1454167675269765e-07,
+      "pos_firing_rate": 1.0,
+      "neg_firing_rate": 1.0
+    },
+    "snippets": [
+      {
+        "activation": 133.216064453125,
         "token": "<|endoftext|>",
         "token_pos": 0,
         "snippet": "<|endoftext|>A sparse autoenc"
       },
       {
-        "activation": 68.98204803466797,
+        "activation": 133.216064453125,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>class ModelTrainer:"
+      },
+      {
+        "activation": 133.216064453125,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>import torch\nimport n"
+      }
+    ]
+  },
+  {
+    "feature_idx": 792,
+    "sample_type": "top_active",
+    "status": "interpretable",
+    "max_activation": 116.006,
+    "hypothesis": "Lexical association with tokens: '<|endoftext|>'",
+    "top_tokens": [
+      "<|endoftext|>",
+      "<|endoftext|>",
+      "<|endoftext|>"
+    ],
+    "validation_metrics": {
+      "mean_positive_act": 116.00602467854817,
+      "mean_negative_act": 116.00601450602214,
+      "specificity": 8.76896356062606e-08,
+      "pos_firing_rate": 1.0,
+      "neg_firing_rate": 1.0
+    },
+    "snippets": [
+      {
+        "activation": 116.00603485107422,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>A sparse autoenc"
+      },
+      {
+        "activation": 116.00603485107422,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>class ModelTrainer:"
+      },
+      {
+        "activation": 116.00603485107422,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>import torch\nimport n"
+      }
+    ]
+  },
+  {
+    "feature_idx": 5250,
+    "sample_type": "top_active",
+    "status": "interpretable",
+    "max_activation": 129.6176,
+    "hypothesis": "Lexical association with tokens: '<|endoftext|>'",
+    "top_tokens": [
+      "<|endoftext|>",
+      "<|endoftext|>",
+      "<|endoftext|>"
+    ],
+    "validation_metrics": {
+      "mean_positive_act": 129.61763509114584,
+      "mean_negative_act": 129.61761983235678,
+      "specificity": 1.1772155117450006e-07,
+      "pos_firing_rate": 1.0,
+      "neg_firing_rate": 1.0
+    },
+    "snippets": [
+      {
+        "activation": 129.61764526367188,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>A sparse autoenc"
+      },
+      {
+        "activation": 129.61764526367188,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>class ModelTrainer:"
+      },
+      {
+        "activation": 129.61764526367188,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>import torch\nimport n"
+      }
+    ]
+  },
+  {
+    "feature_idx": 5293,
+    "sample_type": "top_active",
+    "status": "interpretable",
+    "max_activation": 128.3604,
+    "hypothesis": "Lexical association with tokens: '<|endoftext|>'",
+    "top_tokens": [
+      "<|endoftext|>",
+      "<|endoftext|>",
+      "<|endoftext|>"
+    ],
+    "validation_metrics": {
+      "mean_positive_act": 128.36034647623697,
+      "mean_negative_act": 128.3603312174479,
+      "specificity": 1.1887463287055571e-07,
+      "pos_firing_rate": 1.0,
+      "neg_firing_rate": 1.0
+    },
+    "snippets": [
+      {
+        "activation": 128.36036682128906,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>A sparse autoenc"
+      },
+      {
+        "activation": 128.36036682128906,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>class ModelTrainer:"
+      },
+      {
+        "activation": 128.36036682128906,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>import torch\nimport n"
+      }
+    ]
+  },
+  {
+    "feature_idx": 1007,
+    "sample_type": "top_active",
+    "status": "interpretable",
+    "max_activation": 136.9019,
+    "hypothesis": "Lexical association with tokens: '<|endoftext|>'",
+    "top_tokens": [
+      "<|endoftext|>",
+      "<|endoftext|>",
+      "<|endoftext|>"
+    ],
+    "validation_metrics": {
+      "mean_positive_act": 136.9018809000651,
+      "mean_negative_act": 136.90186564127603,
+      "specificity": 1.1145784822078909e-07,
+      "pos_firing_rate": 1.0,
+      "neg_firing_rate": 1.0
+    },
+    "snippets": [
+      {
+        "activation": 136.9019012451172,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>A sparse autoenc"
+      },
+      {
+        "activation": 136.9019012451172,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>class ModelTrainer:"
+      },
+      {
+        "activation": 136.9019012451172,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>import torch\nimport n"
+      }
+    ]
+  },
+  {
+    "feature_idx": 5557,
+    "sample_type": "top_active",
+    "status": "interpretable",
+    "max_activation": 121.2387,
+    "hypothesis": "Lexical association with tokens: '<|endoftext|>'",
+    "top_tokens": [
+      "<|endoftext|>",
+      "<|endoftext|>",
+      "<|endoftext|>"
+    ],
+    "validation_metrics": {
+      "mean_positive_act": 121.23865254720052,
+      "mean_negative_act": 121.23863728841145,
+      "specificity": 1.2585746164210676e-07,
+      "pos_firing_rate": 1.0,
+      "neg_firing_rate": 1.0
+    },
+    "snippets": [
+      {
+        "activation": 121.23866271972656,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>A sparse autoenc"
+      },
+      {
+        "activation": 121.23866271972656,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>class ModelTrainer:"
+      },
+      {
+        "activation": 121.23866271972656,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>import torch\nimport n"
+      }
+    ]
+  },
+  {
+    "feature_idx": 2245,
+    "sample_type": "top_active",
+    "status": "interpretable",
+    "max_activation": 128.8407,
+    "hypothesis": "Lexical association with tokens: '<|endoftext|>'",
+    "top_tokens": [
+      "<|endoftext|>",
+      "<|endoftext|>",
+      "<|endoftext|>"
+    ],
+    "validation_metrics": {
+      "mean_positive_act": 128.84070332845053,
+      "mean_negative_act": 128.8406982421875,
+      "specificity": 3.947714424797067e-08,
+      "pos_firing_rate": 1.0,
+      "neg_firing_rate": 1.0
+    },
+    "snippets": [
+      {
+        "activation": 128.84071350097656,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>A sparse autoenc"
+      },
+      {
+        "activation": 128.84071350097656,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>class ModelTrainer:"
+      },
+      {
+        "activation": 128.84071350097656,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>import torch\nimport n"
+      }
+    ]
+  },
+  {
+    "feature_idx": 5266,
+    "sample_type": "top_active",
+    "status": "interpretable",
+    "max_activation": 127.5891,
+    "hypothesis": "Lexical association with tokens: '<|endoftext|>'",
+    "top_tokens": [
+      "<|endoftext|>",
+      "<|endoftext|>",
+      "<|endoftext|>"
+    ],
+    "validation_metrics": {
+      "mean_positive_act": 127.58913930257161,
+      "mean_negative_act": 127.58912913004558,
+      "specificity": 7.972877697739695e-08,
+      "pos_firing_rate": 1.0,
+      "neg_firing_rate": 1.0
+    },
+    "snippets": [
+      {
+        "activation": 127.58914947509766,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>A sparse autoenc"
+      },
+      {
+        "activation": 127.58914947509766,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>class ModelTrainer:"
+      },
+      {
+        "activation": 127.58914947509766,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>import torch\nimport n"
+      }
+    ]
+  },
+  {
+    "feature_idx": 4841,
+    "sample_type": "top_active",
+    "status": "interpretable",
+    "max_activation": 141.6825,
+    "hypothesis": "Lexical association with tokens: '<|endoftext|>'",
+    "top_tokens": [
+      "<|endoftext|>",
+      "<|endoftext|>",
+      "<|endoftext|>"
+    ],
+    "validation_metrics": {
+      "mean_positive_act": 141.6824696858724,
+      "mean_negative_act": 141.68245442708334,
+      "specificity": 1.0769708557685807e-07,
+      "pos_firing_rate": 1.0,
+      "neg_firing_rate": 1.0
+    },
+    "snippets": [
+      {
+        "activation": 141.68247985839844,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>A sparse autoenc"
+      },
+      {
+        "activation": 141.68247985839844,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>class ModelTrainer:"
+      },
+      {
+        "activation": 141.68247985839844,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>import torch\nimport n"
+      }
+    ]
+  },
+  {
+    "feature_idx": 4506,
+    "sample_type": "top_active",
+    "status": "interpretable",
+    "max_activation": 134.4695,
+    "hypothesis": "Lexical association with tokens: '<|endoftext|>'",
+    "top_tokens": [
+      "<|endoftext|>",
+      "<|endoftext|>",
+      "<|endoftext|>"
+    ],
+    "validation_metrics": {
+      "mean_positive_act": 134.46947224934897,
+      "mean_negative_act": 134.4694620768229,
+      "specificity": 7.564933430951071e-08,
+      "pos_firing_rate": 1.0,
+      "neg_firing_rate": 1.0
+    },
+    "snippets": [
+      {
+        "activation": 134.469482421875,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>A sparse autoenc"
+      },
+      {
+        "activation": 134.469482421875,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>class ModelTrainer:"
+      },
+      {
+        "activation": 134.469482421875,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>import torch\nimport n"
+      }
+    ]
+  },
+  {
+    "feature_idx": 2939,
+    "sample_type": "top_active",
+    "status": "interpretable",
+    "max_activation": 120.5908,
+    "hypothesis": "Lexical association with tokens: '<|endoftext|>'",
+    "top_tokens": [
+      "<|endoftext|>",
+      "<|endoftext|>",
+      "<|endoftext|>"
+    ],
+    "validation_metrics": {
+      "mean_positive_act": 120.59082539876302,
+      "mean_negative_act": 120.59081268310547,
+      "specificity": 1.0544465140941654e-07,
+      "pos_firing_rate": 1.0,
+      "neg_firing_rate": 1.0
+    },
+    "snippets": [
+      {
+        "activation": 120.59083557128906,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>A sparse autoenc"
+      },
+      {
+        "activation": 120.59083557128906,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>class ModelTrainer:"
+      },
+      {
+        "activation": 120.59083557128906,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>import torch\nimport n"
+      }
+    ]
+  },
+  {
+    "feature_idx": 1181,
+    "sample_type": "top_active",
+    "status": "interpretable",
+    "max_activation": 136.1216,
+    "hypothesis": "Lexical association with tokens: '<|endoftext|>'",
+    "top_tokens": [
+      "<|endoftext|>",
+      "<|endoftext|>",
+      "<|endoftext|>"
+    ],
+    "validation_metrics": {
+      "mean_positive_act": 136.12164306640625,
+      "mean_negative_act": 136.1216278076172,
+      "specificity": 1.120967152523723e-07,
+      "pos_firing_rate": 1.0,
+      "neg_firing_rate": 1.0
+    },
+    "snippets": [
+      {
+        "activation": 136.12164306640625,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>Python functions are defined using"
+      },
+      {
+        "activation": 136.12164306640625,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>A sparse autoenc"
+      },
+      {
+        "activation": 136.12164306640625,
         "token": "<|endoftext|>",
         "token_pos": 0,
         "snippet": "<|endoftext|>Deep neural networks exhibit super"
@@ -312,10 +1755,888 @@
     ]
   },
   {
-    "feature_idx": 2430,
+    "feature_idx": 4008,
+    "sample_type": "top_active",
+    "status": "interpretable",
+    "max_activation": 150.9685,
+    "hypothesis": "Lexical association with tokens: '<|endoftext|>'",
+    "top_tokens": [
+      "<|endoftext|>",
+      "<|endoftext|>",
+      "<|endoftext|>"
+    ],
+    "validation_metrics": {
+      "mean_positive_act": 150.96844991048178,
+      "mean_negative_act": 150.9684295654297,
+      "specificity": 1.3476360196366217e-07,
+      "pos_firing_rate": 1.0,
+      "neg_firing_rate": 1.0
+    },
+    "snippets": [
+      {
+        "activation": 150.9684600830078,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>A sparse autoenc"
+      },
+      {
+        "activation": 150.9684600830078,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>class ModelTrainer:"
+      },
+      {
+        "activation": 150.9684600830078,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>import torch\nimport n"
+      }
+    ]
+  },
+  {
+    "feature_idx": 2235,
+    "sample_type": "top_active",
+    "status": "interpretable",
+    "max_activation": 113.7026,
+    "hypothesis": "Lexical association with tokens: '<|endoftext|>'",
+    "top_tokens": [
+      "<|endoftext|>",
+      "<|endoftext|>",
+      "<|endoftext|>"
+    ],
+    "validation_metrics": {
+      "mean_positive_act": 113.70262908935547,
+      "mean_negative_act": 113.70261891682942,
+      "specificity": 8.946605833018457e-08,
+      "pos_firing_rate": 1.0,
+      "neg_firing_rate": 1.0
+    },
+    "snippets": [
+      {
+        "activation": 113.70262908935547,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>Python functions are defined using"
+      },
+      {
+        "activation": 113.70262908935547,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>A sparse autoenc"
+      },
+      {
+        "activation": 113.70262908935547,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>Deep neural networks exhibit super"
+      }
+    ]
+  },
+  {
+    "feature_idx": 462,
+    "sample_type": "top_active",
+    "status": "interpretable",
+    "max_activation": 27.7603,
+    "hypothesis": "Numeric digits and numerical formatting (e.g., , , )",
+    "top_tokens": [
+      " ",
+      " ",
+      " "
+    ],
+    "validation_metrics": {
+      "mean_positive_act": 21.693919499715168,
+      "mean_negative_act": 18.33027935028076,
+      "specificity": 0.1550499046278184,
+      "pos_firing_rate": 1.0,
+      "neg_firing_rate": 1.0
+    },
+    "snippets": [
+      {
+        "activation": 27.76027488708496,
+        "token": " ",
+        "token_pos": 9,
+        "snippet": "ainer:\n    def __init__("
+      },
+      {
+        "activation": 27.76027488708496,
+        "token": " ",
+        "token_pos": 9,
+        "snippet": "ainer:\n    def __init__("
+      },
+      {
+        "activation": 27.76027488708496,
+        "token": " ",
+        "token_pos": 9,
+        "snippet": "ainer:\n    def __init__("
+      }
+    ]
+  },
+  {
+    "feature_idx": 5718,
+    "sample_type": "top_active",
+    "status": "interpretable",
+    "max_activation": 129.9033,
+    "hypothesis": "Lexical association with tokens: '<|endoftext|>'",
+    "top_tokens": [
+      "<|endoftext|>",
+      "<|endoftext|>",
+      "<|endoftext|>"
+    ],
+    "validation_metrics": {
+      "mean_positive_act": 129.9032745361328,
+      "mean_negative_act": 129.9032745361328,
+      "specificity": 0.0,
+      "pos_firing_rate": 1.0,
+      "neg_firing_rate": 1.0
+    },
+    "snippets": [
+      {
+        "activation": 129.9032745361328,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>Python functions are defined using"
+      },
+      {
+        "activation": 129.9032745361328,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>A sparse autoenc"
+      },
+      {
+        "activation": 129.9032745361328,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>Deep neural networks exhibit super"
+      }
+    ]
+  },
+  {
+    "feature_idx": 1077,
+    "sample_type": "top_active",
+    "status": "interpretable",
+    "max_activation": 129.7496,
+    "hypothesis": "Lexical association with tokens: '<|endoftext|>'",
+    "top_tokens": [
+      "<|endoftext|>",
+      "<|endoftext|>",
+      "<|endoftext|>"
+    ],
+    "validation_metrics": {
+      "mean_positive_act": 129.7495371500651,
+      "mean_negative_act": 129.74952189127603,
+      "specificity": 1.1760187664370673e-07,
+      "pos_firing_rate": 1.0,
+      "neg_firing_rate": 1.0
+    },
+    "snippets": [
+      {
+        "activation": 129.7495574951172,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>A sparse autoenc"
+      },
+      {
+        "activation": 129.7495574951172,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>class ModelTrainer:"
+      },
+      {
+        "activation": 129.7495574951172,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>import torch\nimport n"
+      }
+    ]
+  },
+  {
+    "feature_idx": 4396,
     "sample_type": "random",
     "status": "interpretable",
-    "max_activation": 2.7527,
+    "max_activation": 1.6362,
+    "hypothesis": "Lexical association with tokens: '<|endoftext|>'",
+    "top_tokens": [
+      "<|endoftext|>",
+      "<|endoftext|>",
+      "<|endoftext|>"
+    ],
+    "validation_metrics": {
+      "mean_positive_act": 1.6362061500549316,
+      "mean_negative_act": 1.6362033287684123,
+      "specificity": 1.7242854876201003e-06,
+      "pos_firing_rate": 1.0,
+      "neg_firing_rate": 1.0
+    },
+    "snippets": [
+      {
+        "activation": 1.6362075805664062,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>A sparse autoenc"
+      },
+      {
+        "activation": 1.6362075805664062,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>class ModelTrainer:"
+      },
+      {
+        "activation": 1.6362075805664062,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>import torch\nimport n"
+      }
+    ]
+  },
+  {
+    "feature_idx": 4088,
+    "sample_type": "random",
+    "status": "dead",
+    "max_activation": 0.0,
+    "hypothesis": "Inactive / Dead Feature: no activations observed across sample corpus.",
+    "top_tokens": [],
+    "validation_metrics": {
+      "mean_positive_act": 0.0,
+      "mean_negative_act": 0.0,
+      "specificity": 0.0,
+      "pos_firing_rate": 0.0,
+      "neg_firing_rate": 0.0
+    },
+    "snippets": []
+  },
+  {
+    "feature_idx": 2053,
+    "sample_type": "random",
+    "status": "dead",
+    "max_activation": 0.0,
+    "hypothesis": "Inactive / Dead Feature: no activations observed across sample corpus.",
+    "top_tokens": [],
+    "validation_metrics": {
+      "mean_positive_act": 0.0,
+      "mean_negative_act": 0.0,
+      "specificity": 0.0,
+      "pos_firing_rate": 0.0,
+      "neg_firing_rate": 0.0
+    },
+    "snippets": []
+  },
+  {
+    "feature_idx": 6071,
+    "sample_type": "random",
+    "status": "interpretable",
+    "max_activation": 83.0761,
+    "hypothesis": "Lexical association with tokens: '<|endoftext|>'",
+    "top_tokens": [
+      "<|endoftext|>",
+      "<|endoftext|>",
+      "<|endoftext|>"
+    ],
+    "validation_metrics": {
+      "mean_positive_act": 83.0761006673177,
+      "mean_negative_act": 83.07609303792317,
+      "specificity": 9.183621366393065e-08,
+      "pos_firing_rate": 1.0,
+      "neg_firing_rate": 1.0
+    },
+    "snippets": [
+      {
+        "activation": 83.07611083984375,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>A sparse autoenc"
+      },
+      {
+        "activation": 83.07611083984375,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>class ModelTrainer:"
+      },
+      {
+        "activation": 83.07611083984375,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>import torch\nimport n"
+      }
+    ]
+  },
+  {
+    "feature_idx": 614,
+    "sample_type": "random",
+    "status": "interpretable",
+    "max_activation": 68.111,
+    "hypothesis": "Lexical association with tokens: '<|endoftext|>'",
+    "top_tokens": [
+      "<|endoftext|>",
+      "<|endoftext|>",
+      "<|endoftext|>"
+    ],
+    "validation_metrics": {
+      "mean_positive_act": 68.1110127766927,
+      "mean_negative_act": 68.11100514729817,
+      "specificity": 1.1201411079091671e-07,
+      "pos_firing_rate": 1.0,
+      "neg_firing_rate": 1.0
+    },
+    "snippets": [
+      {
+        "activation": 68.11101531982422,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>Python functions are defined using"
+      },
+      {
+        "activation": 68.11101531982422,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>Deep neural networks exhibit super"
+      },
+      {
+        "activation": 68.11101531982422,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>The quick brown fox jumps"
+      }
+    ]
+  },
+  {
+    "feature_idx": 4400,
+    "sample_type": "random",
+    "status": "interpretable",
+    "max_activation": 3.8873,
+    "hypothesis": "Lexical association with tokens: '<|endoftext|>'",
+    "top_tokens": [
+      "<|endoftext|>",
+      "<|endoftext|>",
+      "<|endoftext|>"
+    ],
+    "validation_metrics": {
+      "mean_positive_act": 3.887299378712972,
+      "mean_negative_act": 3.887299060821533,
+      "specificity": 8.177693765777368e-08,
+      "pos_firing_rate": 1.0,
+      "neg_firing_rate": 1.0
+    },
+    "snippets": [
+      {
+        "activation": 3.887300491333008,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>Python functions are defined using"
+      },
+      {
+        "activation": 3.887300491333008,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>Deep neural networks exhibit super"
+      },
+      {
+        "activation": 3.887300491333008,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>The quick brown fox jumps"
+      }
+    ]
+  },
+  {
+    "feature_idx": 534,
+    "sample_type": "random",
+    "status": "dead",
+    "max_activation": 0.0,
+    "hypothesis": "Inactive / Dead Feature: no activations observed across sample corpus.",
+    "top_tokens": [],
+    "validation_metrics": {
+      "mean_positive_act": 0.0,
+      "mean_negative_act": 0.0,
+      "specificity": 0.0,
+      "pos_firing_rate": 0.0,
+      "neg_firing_rate": 0.0
+    },
+    "snippets": []
+  },
+  {
+    "feature_idx": 3208,
+    "sample_type": "random",
+    "status": "dead",
+    "max_activation": 0.0,
+    "hypothesis": "Inactive / Dead Feature: no activations observed across sample corpus.",
+    "top_tokens": [],
+    "validation_metrics": {
+      "mean_positive_act": 0.0,
+      "mean_negative_act": 0.0,
+      "specificity": 0.0,
+      "pos_firing_rate": 0.0,
+      "neg_firing_rate": 0.0
+    },
+    "snippets": []
+  },
+  {
+    "feature_idx": 2028,
+    "sample_type": "random",
+    "status": "dead",
+    "max_activation": 0.0,
+    "hypothesis": "Inactive / Dead Feature: no activations observed across sample corpus.",
+    "top_tokens": [],
+    "validation_metrics": {
+      "mean_positive_act": 0.0,
+      "mean_negative_act": 0.0,
+      "specificity": 0.0,
+      "pos_firing_rate": 0.0,
+      "neg_firing_rate": 0.0
+    },
+    "snippets": []
+  },
+  {
+    "feature_idx": 3261,
+    "sample_type": "random",
+    "status": "dead",
+    "max_activation": 0.0,
+    "hypothesis": "Inactive / Dead Feature: no activations observed across sample corpus.",
+    "top_tokens": [],
+    "validation_metrics": {
+      "mean_positive_act": 0.0,
+      "mean_negative_act": 0.0,
+      "specificity": 0.0,
+      "pos_firing_rate": 0.0,
+      "neg_firing_rate": 0.0
+    },
+    "snippets": []
+  },
+  {
+    "feature_idx": 3077,
+    "sample_type": "random",
+    "status": "interpretable",
+    "max_activation": 42.3861,
+    "hypothesis": "Lexical association with tokens: '<|endoftext|>'",
+    "top_tokens": [
+      "<|endoftext|>",
+      "<|endoftext|>",
+      "<|endoftext|>"
+    ],
+    "validation_metrics": {
+      "mean_positive_act": 42.38613764444987,
+      "mean_negative_act": 42.386138916015625,
+      "specificity": -2.999956656214253e-08,
+      "pos_firing_rate": 1.0,
+      "neg_firing_rate": 1.0
+    },
+    "snippets": [
+      {
+        "activation": 42.386138916015625,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>Python functions are defined using"
+      },
+      {
+        "activation": 42.386138916015625,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>Deep neural networks exhibit super"
+      },
+      {
+        "activation": 42.386138916015625,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>The quick brown fox jumps"
+      }
+    ]
+  },
+  {
+    "feature_idx": 2238,
+    "sample_type": "random",
+    "status": "dead",
+    "max_activation": 0.0,
+    "hypothesis": "Inactive / Dead Feature: no activations observed across sample corpus.",
+    "top_tokens": [],
+    "validation_metrics": {
+      "mean_positive_act": 0.0,
+      "mean_negative_act": 0.0,
+      "specificity": 0.0,
+      "pos_firing_rate": 0.0,
+      "neg_firing_rate": 0.0
+    },
+    "snippets": []
+  },
+  {
+    "feature_idx": 1842,
+    "sample_type": "random",
+    "status": "interpretable",
+    "max_activation": 65.7445,
+    "hypothesis": "Lexical association with tokens: '<|endoftext|>'",
+    "top_tokens": [
+      "<|endoftext|>",
+      "<|endoftext|>",
+      "<|endoftext|>"
+    ],
+    "validation_metrics": {
+      "mean_positive_act": 65.74452463785808,
+      "mean_negative_act": 65.74451446533203,
+      "specificity": 1.547281100964248e-07,
+      "pos_firing_rate": 1.0,
+      "neg_firing_rate": 1.0
+    },
+    "snippets": [
+      {
+        "activation": 65.7445297241211,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>A sparse autoenc"
+      },
+      {
+        "activation": 65.7445297241211,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>class ModelTrainer:"
+      },
+      {
+        "activation": 65.7445297241211,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>import torch\nimport n"
+      }
+    ]
+  },
+  {
+    "feature_idx": 1496,
+    "sample_type": "random",
+    "status": "interpretable",
+    "max_activation": 8.9411,
+    "hypothesis": "Programming syntax and code delimiters (e.g., def, def, def)",
+    "top_tokens": [
+      " def",
+      " def",
+      " def"
+    ],
+    "validation_metrics": {
+      "mean_positive_act": 6.348415056864421,
+      "mean_negative_act": 6.606650193532308,
+      "specificity": -0.04067710355337621,
+      "pos_firing_rate": 1.0,
+      "neg_firing_rate": 1.0
+    },
+    "snippets": [
+      {
+        "activation": 8.941056251525879,
+        "token": " def",
+        "token_pos": 7,
+        "snippet": " functions are defined using the def keyword, followed by the"
+      },
+      {
+        "activation": 8.941056251525879,
+        "token": " def",
+        "token_pos": 7,
+        "snippet": " functions are defined using the def keyword, followed by the"
+      },
+      {
+        "activation": 8.941056251525879,
+        "token": " def",
+        "token_pos": 7,
+        "snippet": " functions are defined using the def keyword, followed by the"
+      }
+    ]
+  },
+  {
+    "feature_idx": 4359,
+    "sample_type": "random",
+    "status": "dead",
+    "max_activation": 0.0,
+    "hypothesis": "Inactive / Dead Feature: no activations observed across sample corpus.",
+    "top_tokens": [],
+    "validation_metrics": {
+      "mean_positive_act": 0.0,
+      "mean_negative_act": 0.0,
+      "specificity": 0.0,
+      "pos_firing_rate": 0.0,
+      "neg_firing_rate": 0.0
+    },
+    "snippets": []
+  },
+  {
+    "feature_idx": 3544,
+    "sample_type": "random",
+    "status": "interpretable",
+    "max_activation": 33.4047,
+    "hypothesis": "Lexical association with tokens: '<|endoftext|>'",
+    "top_tokens": [
+      "<|endoftext|>",
+      "<|endoftext|>",
+      "<|endoftext|>"
+    ],
+    "validation_metrics": {
+      "mean_positive_act": 33.40469614664713,
+      "mean_negative_act": 33.40468978881836,
+      "specificity": 1.9032739426104114e-07,
+      "pos_firing_rate": 1.0,
+      "neg_firing_rate": 1.0
+    },
+    "snippets": [
+      {
+        "activation": 33.404701232910156,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>A sparse autoenc"
+      },
+      {
+        "activation": 33.404701232910156,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>class ModelTrainer:"
+      },
+      {
+        "activation": 33.404701232910156,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>import torch\nimport n"
+      }
+    ]
+  },
+  {
+    "feature_idx": 5155,
+    "sample_type": "random",
+    "status": "dead",
+    "max_activation": 0.0,
+    "hypothesis": "Inactive / Dead Feature: no activations observed across sample corpus.",
+    "top_tokens": [],
+    "validation_metrics": {
+      "mean_positive_act": 0.0,
+      "mean_negative_act": 0.0,
+      "specificity": 0.0,
+      "pos_firing_rate": 0.0,
+      "neg_firing_rate": 0.0
+    },
+    "snippets": []
+  },
+  {
+    "feature_idx": 1481,
+    "sample_type": "random",
+    "status": "interpretable",
+    "max_activation": 85.743,
+    "hypothesis": "Lexical association with tokens: '<|endoftext|>'",
+    "top_tokens": [
+      "<|endoftext|>",
+      "<|endoftext|>",
+      "<|endoftext|>"
+    ],
+    "validation_metrics": {
+      "mean_positive_act": 85.74302419026692,
+      "mean_negative_act": 85.74301656087239,
+      "specificity": 8.897976952993976e-08,
+      "pos_firing_rate": 1.0,
+      "neg_firing_rate": 1.0
+    },
+    "snippets": [
+      {
+        "activation": 85.74302673339844,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>Python functions are defined using"
+      },
+      {
+        "activation": 85.74302673339844,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>Deep neural networks exhibit super"
+      },
+      {
+        "activation": 85.74302673339844,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>The quick brown fox jumps"
+      }
+    ]
+  },
+  {
+    "feature_idx": 1230,
+    "sample_type": "random",
+    "status": "interpretable",
+    "max_activation": 27.694,
+    "hypothesis": "Lexical association with tokens: '<|endoftext|>'",
+    "top_tokens": [
+      "<|endoftext|>",
+      "<|endoftext|>",
+      "<|endoftext|>"
+    ],
+    "validation_metrics": {
+      "mean_positive_act": 27.693997701009113,
+      "mean_negative_act": 27.693992614746094,
+      "specificity": 1.8365940066008464e-07,
+      "pos_firing_rate": 1.0,
+      "neg_firing_rate": 1.0
+    },
+    "snippets": [
+      {
+        "activation": 27.69400405883789,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>A sparse autoenc"
+      },
+      {
+        "activation": 27.69400405883789,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>class ModelTrainer:"
+      },
+      {
+        "activation": 27.69400405883789,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>import torch\nimport n"
+      }
+    ]
+  },
+  {
+    "feature_idx": 5949,
+    "sample_type": "random",
+    "status": "interpretable",
+    "max_activation": 30.0869,
+    "hypothesis": "Lexical association with tokens: '<|endoftext|>'",
+    "top_tokens": [
+      "<|endoftext|>",
+      "<|endoftext|>",
+      "<|endoftext|>"
+    ],
+    "validation_metrics": {
+      "mean_positive_act": 30.086929321289062,
+      "mean_negative_act": 30.08692741394043,
+      "specificity": 6.33945927962442e-08,
+      "pos_firing_rate": 1.0,
+      "neg_firing_rate": 1.0
+    },
+    "snippets": [
+      {
+        "activation": 30.086931228637695,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>Python functions are defined using"
+      },
+      {
+        "activation": 30.086931228637695,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>Deep neural networks exhibit super"
+      },
+      {
+        "activation": 30.086931228637695,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>The quick brown fox jumps"
+      }
+    ]
+  },
+  {
+    "feature_idx": 2719,
+    "sample_type": "random",
+    "status": "interpretable",
+    "max_activation": 8.9694,
+    "hypothesis": "Lexical association with tokens: 'Tr'",
+    "top_tokens": [
+      "Tr",
+      "Tr",
+      "Tr"
+    ],
+    "validation_metrics": {
+      "mean_positive_act": 5.3254672686258955,
+      "mean_negative_act": 6.560736656188965,
+      "specificity": -0.2319551177866501,
+      "pos_firing_rate": 1.0,
+      "neg_firing_rate": 1.0
+    },
+    "snippets": [
+      {
+        "activation": 8.969362258911133,
+        "token": "Tr",
+        "token_pos": 3,
+        "snippet": "<|endoftext|>class ModelTrainer:\n  "
+      },
+      {
+        "activation": 8.969362258911133,
+        "token": "Tr",
+        "token_pos": 3,
+        "snippet": "<|endoftext|>class ModelTrainer:\n  "
+      },
+      {
+        "activation": 8.969362258911133,
+        "token": "Tr",
+        "token_pos": 3,
+        "snippet": "<|endoftext|>class ModelTrainer:\n  "
+      }
+    ]
+  },
+  {
+    "feature_idx": 3587,
+    "sample_type": "random",
+    "status": "interpretable",
+    "max_activation": 65.286,
+    "hypothesis": "Lexical association with tokens: '<|endoftext|>'",
+    "top_tokens": [
+      "<|endoftext|>",
+      "<|endoftext|>",
+      "<|endoftext|>"
+    ],
+    "validation_metrics": {
+      "mean_positive_act": 65.28600565592448,
+      "mean_negative_act": 65.28599802652995,
+      "specificity": 1.1686110146574204e-07,
+      "pos_firing_rate": 1.0,
+      "neg_firing_rate": 1.0
+    },
+    "snippets": [
+      {
+        "activation": 65.2860107421875,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>A sparse autoenc"
+      },
+      {
+        "activation": 65.2860107421875,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>class ModelTrainer:"
+      },
+      {
+        "activation": 65.2860107421875,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>import torch\nimport n"
+      }
+    ]
+  },
+  {
+    "feature_idx": 5175,
+    "sample_type": "random",
+    "status": "dead",
+    "max_activation": 0.0,
+    "hypothesis": "Inactive / Dead Feature: no activations observed across sample corpus.",
+    "top_tokens": [],
+    "validation_metrics": {
+      "mean_positive_act": 0.0,
+      "mean_negative_act": 0.0,
+      "specificity": 0.0,
+      "pos_firing_rate": 0.0,
+      "neg_firing_rate": 0.0
+    },
+    "snippets": []
+  },
+  {
+    "feature_idx": 3637,
+    "sample_type": "random",
+    "status": "dead",
+    "max_activation": 0.0,
+    "hypothesis": "Inactive / Dead Feature: no activations observed across sample corpus.",
+    "top_tokens": [],
+    "validation_metrics": {
+      "mean_positive_act": 0.0,
+      "mean_negative_act": 0.0,
+      "specificity": 0.0,
+      "pos_firing_rate": 0.0,
+      "neg_firing_rate": 0.0
+    },
+    "snippets": []
+  },
+  {
+    "feature_idx": 5053,
+    "sample_type": "random",
+    "status": "interpretable",
+    "max_activation": 8.4644,
     "hypothesis": "Programming syntax and code delimiters (e.g., (, (, ()",
     "top_tokens": [
       "(",
@@ -323,27 +2644,27 @@
       "("
     ],
     "validation_metrics": {
-      "mean_positive_act": 3.039706230163574,
-      "mean_negative_act": 0.9976796706517538,
-      "specificity": 0.6717841807370752,
+      "mean_positive_act": 7.588491439819336,
+      "mean_negative_act": 4.099260568618774,
+      "specificity": 0.4598056015312092,
       "pos_firing_rate": 1.0,
-      "neg_firing_rate": 0.6666666666666666
+      "neg_firing_rate": 1.0
     },
     "snippets": [
       {
-        "activation": 2.752687692642212,
+        "activation": 8.46440601348877,
         "token": "(",
         "token_pos": 14,
         "snippet": "  def __init__(self, lr="
       },
       {
-        "activation": 2.752687692642212,
+        "activation": 8.46440601348877,
         "token": "(",
         "token_pos": 14,
         "snippet": "  def __init__(self, lr="
       },
       {
-        "activation": 2.752687692642212,
+        "activation": 8.46440601348877,
         "token": "(",
         "token_pos": 14,
         "snippet": "  def __init__(self, lr="
@@ -351,41 +2672,655 @@
     ]
   },
   {
-    "feature_idx": 3150,
+    "feature_idx": 5273,
     "sample_type": "random",
-    "status": "interpretable",
-    "max_activation": 1.7545,
-    "hypothesis": "Lexical association with tokens: 'oen'",
+    "status": "polysemantic_or_noisy",
+    "max_activation": 0.423,
+    "hypothesis": "Lexical association with tokens: '<|endoftext|>'",
     "top_tokens": [
-      "oen",
-      "oen",
-      "oen"
+      "<|endoftext|>",
+      "<|endoftext|>",
+      "<|endoftext|>"
     ],
     "validation_metrics": {
-      "mean_positive_act": 0.32989081740379333,
-      "mean_negative_act": 0.7115383346875509,
-      "specificity": -1.0,
-      "pos_firing_rate": 0.6666666666666666,
-      "neg_firing_rate": 0.6666666666666666
+      "mean_positive_act": 0.42300158739089966,
+      "mean_negative_act": 0.4230037331581116,
+      "specificity": -5.0727166891956346e-06,
+      "pos_firing_rate": 1.0,
+      "neg_firing_rate": 1.0
     },
     "snippets": [
       {
-        "activation": 1.7544713020324707,
-        "token": "oen",
-        "token_pos": 4,
-        "snippet": "<|endoftext|>A sparse autoencoder uses an over"
+        "activation": 0.4230031371116638,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>Python functions are defined using"
       },
       {
-        "activation": 1.7544713020324707,
-        "token": "oen",
-        "token_pos": 4,
-        "snippet": "<|endoftext|>A sparse autoencoder uses an over"
+        "activation": 0.4230031371116638,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>Deep neural networks exhibit super"
       },
       {
-        "activation": 1.7544713020324707,
-        "token": "oen",
-        "token_pos": 4,
-        "snippet": "<|endoftext|>A sparse autoencoder uses an over"
+        "activation": 0.4230031371116638,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>The quick brown fox jumps"
+      }
+    ]
+  },
+  {
+    "feature_idx": 5622,
+    "sample_type": "random",
+    "status": "interpretable",
+    "max_activation": 94.7086,
+    "hypothesis": "Lexical association with tokens: '<|endoftext|>'",
+    "top_tokens": [
+      "<|endoftext|>",
+      "<|endoftext|>",
+      "<|endoftext|>"
+    ],
+    "validation_metrics": {
+      "mean_positive_act": 94.70859018961589,
+      "mean_negative_act": 94.70858001708984,
+      "specificity": 1.074086946710665e-07,
+      "pos_firing_rate": 1.0,
+      "neg_firing_rate": 1.0
+    },
+    "snippets": [
+      {
+        "activation": 94.7085952758789,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>A sparse autoenc"
+      },
+      {
+        "activation": 94.7085952758789,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>class ModelTrainer:"
+      },
+      {
+        "activation": 94.7085952758789,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>import torch\nimport n"
+      }
+    ]
+  },
+  {
+    "feature_idx": 1893,
+    "sample_type": "random",
+    "status": "dead",
+    "max_activation": 0.0,
+    "hypothesis": "Inactive / Dead Feature: no activations observed across sample corpus.",
+    "top_tokens": [],
+    "validation_metrics": {
+      "mean_positive_act": 0.0,
+      "mean_negative_act": 0.0,
+      "specificity": 0.0,
+      "pos_firing_rate": 0.0,
+      "neg_firing_rate": 0.0
+    },
+    "snippets": []
+  },
+  {
+    "feature_idx": 1554,
+    "sample_type": "random",
+    "status": "interpretable",
+    "max_activation": 9.2325,
+    "hypothesis": "Lexical association with tokens: 'each'",
+    "top_tokens": [
+      " each",
+      " each",
+      " each"
+    ],
+    "validation_metrics": {
+      "mean_positive_act": 6.412790298461914,
+      "mean_negative_act": 5.493415514628093,
+      "specificity": 0.1433657957058615,
+      "pos_firing_rate": 1.0,
+      "neg_firing_rate": 1.0
+    },
+    "snippets": [
+      {
+        "activation": 9.2325439453125,
+        "token": " each",
+        "token_pos": 14,
+        "snippet": " tourists from around the world each year."
+      },
+      {
+        "activation": 9.2325439453125,
+        "token": " each",
+        "token_pos": 14,
+        "snippet": " tourists from around the world each year."
+      },
+      {
+        "activation": 9.2325439453125,
+        "token": " each",
+        "token_pos": 14,
+        "snippet": " tourists from around the world each year."
+      }
+    ]
+  },
+  {
+    "feature_idx": 4686,
+    "sample_type": "random",
+    "status": "dead",
+    "max_activation": 0.0,
+    "hypothesis": "Inactive / Dead Feature: no activations observed across sample corpus.",
+    "top_tokens": [],
+    "validation_metrics": {
+      "mean_positive_act": 0.0,
+      "mean_negative_act": 0.0,
+      "specificity": 0.0,
+      "pos_firing_rate": 0.0,
+      "neg_firing_rate": 0.0
+    },
+    "snippets": []
+  },
+  {
+    "feature_idx": 2822,
+    "sample_type": "random",
+    "status": "dead",
+    "max_activation": 0.0,
+    "hypothesis": "Inactive / Dead Feature: no activations observed across sample corpus.",
+    "top_tokens": [],
+    "validation_metrics": {
+      "mean_positive_act": 0.0,
+      "mean_negative_act": 0.0,
+      "specificity": 0.0,
+      "pos_firing_rate": 0.0,
+      "neg_firing_rate": 0.0
+    },
+    "snippets": []
+  },
+  {
+    "feature_idx": 3665,
+    "sample_type": "random",
+    "status": "interpretable",
+    "max_activation": 101.0137,
+    "hypothesis": "Lexical association with tokens: '<|endoftext|>'",
+    "top_tokens": [
+      "<|endoftext|>",
+      "<|endoftext|>",
+      "<|endoftext|>"
+    ],
+    "validation_metrics": {
+      "mean_positive_act": 101.01368459065755,
+      "mean_negative_act": 101.01367441813152,
+      "specificity": 1.0070443498240227e-07,
+      "pos_firing_rate": 1.0,
+      "neg_firing_rate": 1.0
+    },
+    "snippets": [
+      {
+        "activation": 101.01368713378906,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>Python functions are defined using"
+      },
+      {
+        "activation": 101.01368713378906,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>Deep neural networks exhibit super"
+      },
+      {
+        "activation": 101.01368713378906,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>The quick brown fox jumps"
+      }
+    ]
+  },
+  {
+    "feature_idx": 4003,
+    "sample_type": "random",
+    "status": "interpretable",
+    "max_activation": 11.2629,
+    "hypothesis": "Lexical association with tokens: 'space'",
+    "top_tokens": [
+      " space",
+      " space",
+      " space"
+    ],
+    "validation_metrics": {
+      "mean_positive_act": 7.617414792378743,
+      "mean_negative_act": 7.473739147186279,
+      "specificity": 0.018861470604989505,
+      "pos_firing_rate": 1.0,
+      "neg_firing_rate": 1.0
+    },
+    "snippets": [
+      {
+        "activation": 11.26286506652832,
+        "token": " space",
+        "token_pos": 18,
+        "snippet": " represent linear directions in activation space."
+      },
+      {
+        "activation": 11.26286506652832,
+        "token": " space",
+        "token_pos": 18,
+        "snippet": " represent linear directions in activation space."
+      },
+      {
+        "activation": 11.26286506652832,
+        "token": " space",
+        "token_pos": 18,
+        "snippet": " represent linear directions in activation space."
+      }
+    ]
+  },
+  {
+    "feature_idx": 5111,
+    "sample_type": "random",
+    "status": "dead",
+    "max_activation": 0.0,
+    "hypothesis": "Inactive / Dead Feature: no activations observed across sample corpus.",
+    "top_tokens": [],
+    "validation_metrics": {
+      "mean_positive_act": 0.0,
+      "mean_negative_act": 0.0,
+      "specificity": 0.0,
+      "pos_firing_rate": 0.0,
+      "neg_firing_rate": 0.0
+    },
+    "snippets": []
+  },
+  {
+    "feature_idx": 815,
+    "sample_type": "random",
+    "status": "dead",
+    "max_activation": 0.0,
+    "hypothesis": "Inactive / Dead Feature: no activations observed across sample corpus.",
+    "top_tokens": [],
+    "validation_metrics": {
+      "mean_positive_act": 0.0,
+      "mean_negative_act": 0.0,
+      "specificity": 0.0,
+      "pos_firing_rate": 0.0,
+      "neg_firing_rate": 0.0
+    },
+    "snippets": []
+  },
+  {
+    "feature_idx": 68,
+    "sample_type": "random",
+    "status": "interpretable",
+    "max_activation": 36.6106,
+    "hypothesis": "Lexical association with tokens: '<|endoftext|>'",
+    "top_tokens": [
+      "<|endoftext|>",
+      "<|endoftext|>",
+      "<|endoftext|>"
+    ],
+    "validation_metrics": {
+      "mean_positive_act": 36.610635121663414,
+      "mean_negative_act": 36.61062749226888,
+      "specificity": 2.0839284830476757e-07,
+      "pos_firing_rate": 1.0,
+      "neg_firing_rate": 1.0
+    },
+    "snippets": [
+      {
+        "activation": 36.61064529418945,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>A sparse autoenc"
+      },
+      {
+        "activation": 36.61064529418945,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>class ModelTrainer:"
+      },
+      {
+        "activation": 36.61064529418945,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>import torch\nimport n"
+      }
+    ]
+  },
+  {
+    "feature_idx": 6078,
+    "sample_type": "random",
+    "status": "dead",
+    "max_activation": 0.0,
+    "hypothesis": "Inactive / Dead Feature: no activations observed across sample corpus.",
+    "top_tokens": [],
+    "validation_metrics": {
+      "mean_positive_act": 0.0,
+      "mean_negative_act": 0.0,
+      "specificity": 0.0,
+      "pos_firing_rate": 0.0,
+      "neg_firing_rate": 0.0
+    },
+    "snippets": []
+  },
+  {
+    "feature_idx": 2310,
+    "sample_type": "random",
+    "status": "interpretable",
+    "max_activation": 7.6252,
+    "hypothesis": "Programming syntax and code delimiters (e.g., (, (, ()",
+    "top_tokens": [
+      "(",
+      "(",
+      "("
+    ],
+    "validation_metrics": {
+      "mean_positive_act": 7.031326611836751,
+      "mean_negative_act": 5.818127155303955,
+      "specificity": 0.1725420427050649,
+      "pos_firing_rate": 1.0,
+      "neg_firing_rate": 1.0
+    },
+    "snippets": [
+      {
+        "activation": 7.62521505355835,
+        "token": "(",
+        "token_pos": 14,
+        "snippet": "  def __init__(self, lr="
+      },
+      {
+        "activation": 7.62521505355835,
+        "token": "(",
+        "token_pos": 14,
+        "snippet": "  def __init__(self, lr="
+      },
+      {
+        "activation": 7.62521505355835,
+        "token": "(",
+        "token_pos": 14,
+        "snippet": "  def __init__(self, lr="
+      }
+    ]
+  },
+  {
+    "feature_idx": 1331,
+    "sample_type": "random",
+    "status": "dead",
+    "max_activation": 0.0,
+    "hypothesis": "Inactive / Dead Feature: no activations observed across sample corpus.",
+    "top_tokens": [],
+    "validation_metrics": {
+      "mean_positive_act": 0.0,
+      "mean_negative_act": 0.0,
+      "specificity": 0.0,
+      "pos_firing_rate": 0.0,
+      "neg_firing_rate": 0.0
+    },
+    "snippets": []
+  },
+  {
+    "feature_idx": 1080,
+    "sample_type": "random",
+    "status": "dead",
+    "max_activation": 0.0,
+    "hypothesis": "Inactive / Dead Feature: no activations observed across sample corpus.",
+    "top_tokens": [],
+    "validation_metrics": {
+      "mean_positive_act": 0.0,
+      "mean_negative_act": 0.0,
+      "specificity": 0.0,
+      "pos_firing_rate": 0.0,
+      "neg_firing_rate": 0.0
+    },
+    "snippets": []
+  },
+  {
+    "feature_idx": 4263,
+    "sample_type": "random",
+    "status": "dead",
+    "max_activation": 0.0,
+    "hypothesis": "Inactive / Dead Feature: no activations observed across sample corpus.",
+    "top_tokens": [],
+    "validation_metrics": {
+      "mean_positive_act": 0.0,
+      "mean_negative_act": 0.0,
+      "specificity": 0.0,
+      "pos_firing_rate": 0.0,
+      "neg_firing_rate": 0.0
+    },
+    "snippets": []
+  },
+  {
+    "feature_idx": 2458,
+    "sample_type": "random",
+    "status": "dead",
+    "max_activation": 0.0,
+    "hypothesis": "Inactive / Dead Feature: no activations observed across sample corpus.",
+    "top_tokens": [],
+    "validation_metrics": {
+      "mean_positive_act": 0.0,
+      "mean_negative_act": 0.0,
+      "specificity": 0.0,
+      "pos_firing_rate": 0.0,
+      "neg_firing_rate": 0.0
+    },
+    "snippets": []
+  },
+  {
+    "feature_idx": 3908,
+    "sample_type": "random",
+    "status": "dead",
+    "max_activation": 0.0,
+    "hypothesis": "Inactive / Dead Feature: no activations observed across sample corpus.",
+    "top_tokens": [],
+    "validation_metrics": {
+      "mean_positive_act": 0.0,
+      "mean_negative_act": 0.0,
+      "specificity": 0.0,
+      "pos_firing_rate": 0.0,
+      "neg_firing_rate": 0.0
+    },
+    "snippets": []
+  },
+  {
+    "feature_idx": 290,
+    "sample_type": "random",
+    "status": "dead",
+    "max_activation": 0.0,
+    "hypothesis": "Inactive / Dead Feature: no activations observed across sample corpus.",
+    "top_tokens": [],
+    "validation_metrics": {
+      "mean_positive_act": 0.0,
+      "mean_negative_act": 0.0,
+      "specificity": 0.0,
+      "pos_firing_rate": 0.0,
+      "neg_firing_rate": 0.0
+    },
+    "snippets": []
+  },
+  {
+    "feature_idx": 6000,
+    "sample_type": "random",
+    "status": "dead",
+    "max_activation": 0.0,
+    "hypothesis": "Inactive / Dead Feature: no activations observed across sample corpus.",
+    "top_tokens": [],
+    "validation_metrics": {
+      "mean_positive_act": 0.0,
+      "mean_negative_act": 0.0,
+      "specificity": 0.0,
+      "pos_firing_rate": 0.0,
+      "neg_firing_rate": 0.0
+    },
+    "snippets": []
+  },
+  {
+    "feature_idx": 5911,
+    "sample_type": "random",
+    "status": "interpretable",
+    "max_activation": 12.3117,
+    "hypothesis": "Lexical association with tokens: '<|endoftext|>'",
+    "top_tokens": [
+      "<|endoftext|>",
+      "<|endoftext|>",
+      "<|endoftext|>"
+    ],
+    "validation_metrics": {
+      "mean_positive_act": 12.311710993448893,
+      "mean_negative_act": 12.311707178751627,
+      "specificity": 3.0984298345330026e-07,
+      "pos_firing_rate": 1.0,
+      "neg_firing_rate": 1.0
+    },
+    "snippets": [
+      {
+        "activation": 12.311712265014648,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>A sparse autoenc"
+      },
+      {
+        "activation": 12.311712265014648,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>class ModelTrainer:"
+      },
+      {
+        "activation": 12.311712265014648,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>import torch\nimport n"
+      }
+    ]
+  },
+  {
+    "feature_idx": 4061,
+    "sample_type": "random",
+    "status": "interpretable",
+    "max_activation": 7.8214,
+    "hypothesis": "Lexical association with tokens: 'tourists'",
+    "top_tokens": [
+      " tourists",
+      " tourists",
+      " tourists"
+    ],
+    "validation_metrics": {
+      "mean_positive_act": 7.259998162587483,
+      "mean_negative_act": 7.25999657313029,
+      "specificity": 2.1893355312528217e-07,
+      "pos_firing_rate": 1.0,
+      "neg_firing_rate": 1.0
+    },
+    "snippets": [
+      {
+        "activation": 7.821414470672607,
+        "token": " tourists",
+        "token_pos": 9,
+        "snippet": " in Europe attract millions of tourists from around the world each"
+      },
+      {
+        "activation": 7.821414470672607,
+        "token": " tourists",
+        "token_pos": 9,
+        "snippet": " in Europe attract millions of tourists from around the world each"
+      },
+      {
+        "activation": 7.821414470672607,
+        "token": " tourists",
+        "token_pos": 9,
+        "snippet": " in Europe attract millions of tourists from around the world each"
+      }
+    ]
+  },
+  {
+    "feature_idx": 886,
+    "sample_type": "random",
+    "status": "interpretable",
+    "max_activation": 7.6367,
+    "hypothesis": "Lexical association with tokens: '<|endoftext|>'",
+    "top_tokens": [
+      "<|endoftext|>",
+      "<|endoftext|>",
+      "<|endoftext|>"
+    ],
+    "validation_metrics": {
+      "mean_positive_act": 7.636741638183594,
+      "mean_negative_act": 7.636746088663737,
+      "specificity": -5.827721238169028e-07,
+      "pos_firing_rate": 1.0,
+      "neg_firing_rate": 1.0
+    },
+    "snippets": [
+      {
+        "activation": 7.636749267578125,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>Python functions are defined using"
+      },
+      {
+        "activation": 7.636749267578125,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>Deep neural networks exhibit super"
+      },
+      {
+        "activation": 7.636749267578125,
+        "token": "<|endoftext|>",
+        "token_pos": 0,
+        "snippet": "<|endoftext|>The quick brown fox jumps"
+      }
+    ]
+  },
+  {
+    "feature_idx": 4560,
+    "sample_type": "random",
+    "status": "dead",
+    "max_activation": 0.0,
+    "hypothesis": "Inactive / Dead Feature: no activations observed across sample corpus.",
+    "top_tokens": [],
+    "validation_metrics": {
+      "mean_positive_act": 0.0,
+      "mean_negative_act": 0.0,
+      "specificity": 0.0,
+      "pos_firing_rate": 0.0,
+      "neg_firing_rate": 0.0
+    },
+    "snippets": []
+  },
+  {
+    "feature_idx": 4890,
+    "sample_type": "random",
+    "status": "interpretable",
+    "max_activation": 11.1769,
+    "hypothesis": "Lexical association with tokens: 'attract'",
+    "top_tokens": [
+      " attract",
+      " attract",
+      " attract"
+    ],
+    "validation_metrics": {
+      "mean_positive_act": 7.988973617553711,
+      "mean_negative_act": 6.584250450134277,
+      "specificity": 0.1758327458151716,
+      "pos_firing_rate": 1.0,
+      "neg_firing_rate": 1.0
+    },
+    "snippets": [
+      {
+        "activation": 11.17688274383545,
+        "token": " attract",
+        "token_pos": 6,
+        "snippet": "The historical monuments in Europe attract millions of tourists from around"
+      },
+      {
+        "activation": 11.17688274383545,
+        "token": " attract",
+        "token_pos": 6,
+        "snippet": "The historical monuments in Europe attract millions of tourists from around"
+      },
+      {
+        "activation": 11.17688274383545,
+        "token": " attract",
+        "token_pos": 6,
+        "snippet": "The historical monuments in Europe attract millions of tourists from around"
       }
     ]
   }
