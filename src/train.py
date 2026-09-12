@@ -126,16 +126,22 @@ def train_sae(
 
     pbar.close()
 
-    # Final evaluation on held-out validation shard if available
+    # Final evaluation on held-out validation shard if available (batched to prevent OOM)
     final_val_fve = None
     if val_shard_path and os.path.exists(val_shard_path):
         sae.eval()
         with torch.no_grad():
-            val_batch = torch.load(val_shard_path, map_location=resolved_device)
+            val_tensor = torch.load(val_shard_path, map_location="cpu")
+            # Evaluate on a representative sample (up to 8,192 tokens) to avoid VRAM OOM
+            sample_size = min(8192, val_tensor.shape[0])
+            val_batch = val_tensor[:sample_size].to(resolved_device)
             val_out = sae(val_batch)
             final_val_fve = SparseAutoencoder.compute_fve(val_batch, val_out.sae_out)
             final_val_l0 = SparseAutoencoder.compute_l0(val_out.feature_acts)
             logger.info(f"Held-out Validation FVE: {final_val_fve:.4f}, L0: {final_val_l0:.2f}")
+            del val_batch, val_out, val_tensor
+            if resolved_device.type == "cuda":
+                torch.cuda.empty_cache()
 
     # Save final model and training summary
     final_dir = os.path.join(train_config.checkpoint_dir, "final")
