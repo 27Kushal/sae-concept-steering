@@ -11,6 +11,48 @@ from src.sae import SparseAutoencoder
 logger = logging.getLogger(__name__)
 
 
+CONCEPTS = {
+    "python_code": {
+        "feature_idx": 42,  # Target feature index (or determined from Part 3)
+        "test_prompts": [
+            "Write a function that",
+            "Here is the implementation:",
+            "To solve this problem in software,",
+        ],
+        "positive_prompts": [
+            "def calculate_mean(numbers):\n    return sum(numbers) / len(numbers)",
+            "import os\nimport sys\nfrom pathlib import Path",
+            "class NeuralNet(torch.nn.Module):\n    def __init__(self):",
+            "for i in range(len(items)):\n    if items[i] == target: return i",
+        ],
+        "negative_prompts": [
+            "The morning sun cast a gentle golden glow over the tranquil valley.",
+            "Historical trade routes connected civilizations across ancient continents.",
+            "Fresh ingredients and careful seasoning are the secrets to great cuisine.",
+            "The orchestra played a moving symphony that echoed through the grand concert hall.",
+        ],
+    },
+    "sentiment": {
+        "feature_idx": 15,
+        "test_prompts": [
+            "The movie was",
+            "The customer service was",
+            "My experience at the restaurant was",
+        ],
+        "positive_prompts": [
+            "This is absolutely wonderful and brilliant, an outstanding masterpiece!",
+            "I love this incredible and fantastic experience, truly superb and joyful!",
+            "Delightful, excellent service and amazingly kind staff.",
+        ],
+        "negative_prompts": [
+            "This is terrible, horrible, completely disappointing and dreadful.",
+            "I hate this awful and ugly experience, truly the worst service.",
+            "Disgusting, poor quality and horribly rude staff.",
+        ],
+    },
+}
+
+
 class ActivationSteeringHook:
     """TransformerLens hook for adding a steering vector to residual stream activations.
     
