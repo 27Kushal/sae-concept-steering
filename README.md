@@ -1,12 +1,13 @@
 # Interpretable Concept Steering via Sparse Autoencoders
 
-[![Prototyped on Apple Silicon](https://img.shields.io/badge/Hardware-Apple%20Silicon%20M4%20(MPS)-lightgrey.svg)](#development-environment)
-[![Trained on Google Colab](https://img.shields.io/badge/Compute-Google%20Colab%20(T4%20GPU)-orange.svg)](#google-colab-run)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/27Kushal/sae-concept-steering/blob/main/notebooks/colab_sae_pipeline.ipynb)
+[![Prototyped on Apple Silicon](https://img.shields.io/badge/Hardware-Apple%20Silicon%20M4%20(MPS)-lightgrey.svg)](#dual-environment-architecture)
+[![Trained on Google Colab](https://img.shields.io/badge/Compute-Google%20Colab%20(T4%20GPU)-orange.svg)](#google-colab-instructions-t4-gpu)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 An end-to-end mechanistic interpretability research project investigating dictionary learning and activation steering in open-weights language models. We train a Sparse Autoencoder (SAE) on the residual stream of **GPT-2 small (Layer 6)**, systematically analyze the interpretability of learned latents, and apply these feature directions to steer language generation with quantitative evaluation against an unsteered baseline and a Difference-of-Means steering vector.
 
-> **Environment Disclosure**: Prototyped locally on Apple Silicon (MPS); full activation collection and SAE training run on Google Colab (T4 GPU).
+> **Environment Disclosure**: Prototyped locally on Apple Silicon (MPS); full activation collection and SAE training run on Google Colab (T4 GPU). Includes an interactive web explorer at [`results/dashboard.html`](results/dashboard.html).
 
 ---
 

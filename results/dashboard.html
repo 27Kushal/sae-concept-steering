@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interpretable Concept Steering via Sparse Autoencoders - Dashboard</title>
+    <style>
+        :root {
+            --bg: #0f172a;
+            --surface: #1e293b;
+            --border: #334155;
+            --text: #f8fafc;
+            --text-muted: #94a3b8;
+            --primary: #3b82f6;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --danger: #ef4444;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+        body { background: var(--bg); color: var(--text); padding: 32px 24px; line-height: 1.5; }
+        .container { max-width: 1200px; margin: 0 auto; }
+        header { margin-bottom: 32px; border-bottom: 1px solid var(--border); padding-bottom: 24px; }
+        h1 { font-size: 28px; font-weight: 700; margin-bottom: 8px; color: #fff; }
+        p.subtitle { color: var(--text-muted); font-size: 15px; }
+
+        /* Stat Grid */
+        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-bottom: 32px; }
+        .stat-card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 20px; }
+        .stat-label { font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); margin-bottom: 6px; font-weight: 600; }
+        .stat-val { font-size: 26px; font-weight: 700; color: #fff; }
+        .stat-sub { font-size: 12px; color: var(--text-muted); margin-top: 4px; }
+
+        /* Sections */
+        .section-title { font-size: 20px; font-weight: 600; margin: 32px 0 16px 0; color: #fff; }
+
+        /* Table */
+        .table-container { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; overflow-x: auto; margin-bottom: 32px; }
+        table { width: 100%; border-collapse: collapse; text-align: left; font-size: 14px; }
+        th, td { padding: 14px 18px; border-bottom: 1px solid var(--border); }
+        th { background: rgba(0,0,0,0.2); color: var(--text-muted); font-weight: 600; text-transform: uppercase; font-size: 11px; letter-spacing: 0.05em; }
+        tr:last-child td { border-bottom: none; }
+        .method-tag { display: inline-block; padding: 3px 8px; border-radius: 4px; font-size: 12px; font-weight: 600; }
+
+        /* Filter Controls */
+        .controls { display: flex; gap: 12px; margin-bottom: 20px; flex-wrap: wrap; }
+        .search-input { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 10px 16px; color: #fff; font-size: 14px; flex: 1; min-width: 260px; outline: none; }
+        .search-input:focus { border-color: var(--primary); }
+        .filter-btn { background: var(--surface); border: 1px solid var(--border); color: var(--text-muted); padding: 10px 16px; border-radius: 8px; cursor: pointer; font-size: 13px; font-weight: 500; transition: all 0.15s; }
+        .filter-btn.active { background: var(--primary); color: #fff; border-color: var(--primary); }
+
+        /* Feature Grid */
+        .feature-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)); gap: 16px; }
+        .feature-card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 18px; display: flex; flex-direction: column; transition: transform 0.15s, border-color 0.15s; }
+        .feature-card:hover { border-color: #475569; transform: translateY(-2px); }
+        .card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+        .feat-id { font-size: 16px; font-weight: 700; color: #fff; }
+        .badge { font-size: 11px; font-weight: 600; padding: 3px 8px; border-radius: 20px; }
+        .meta-row { font-size: 12px; color: var(--text-muted); margin-bottom: 12px; }
+        .meta-label { color: var(--text-muted); }
+        .meta-val { color: #fff; font-weight: 600; }
+        .hypothesis-box { background: rgba(0,0,0,0.25); border-left: 3px solid var(--primary); padding: 10px 12px; font-size: 13px; border-radius: 0 6px 6px 0; margin-bottom: 12px; color: #e2e8f0; }
+        .snippet-box { background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.05); border-radius: 6px; padding: 8px 10px; font-size: 12px; font-family: monospace; margin-top: 6px; display: flex; gap: 8px; align-items: flex-start; }
+        .act-tag { background: rgba(59,130,246,0.2); color: #93c5fd; padding: 1px 6px; border-radius: 4px; font-size: 10px; white-space: nowrap; font-weight: 600; }
+        .snip-text { color: #cbd5e1; word-break: break-all; }
+        .snippet-empty { font-size: 12px; color: var(--text-muted); font-style: italic; padding: 6px 0; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Interpretable Concept Steering via Sparse Autoencoders</h1>
+            <p class="subtitle">Mechanistic interpretability dashboard for GPT-2 small (Layer 6 residual stream) &middot; Dictionary size: 6,144 latents</p>
+        </header>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-label">Model & Hook</div>
+                <div class="stat-val" style="font-size: 20px;">GPT-2 Small</div>
+                <div class="stat-sub">Layer 6 Residual Stream (d=768)</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">SAE Expansion</div>
+                <div class="stat-val">8&times;</div>
+                <div class="stat-sub">6,144 Overcomplete Latents</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Interpretable Rate</div>
+                <div class="stat-val" style="color: var(--success);">100.0%</div>
+                <div class="stat-sub">10 clean / 10 analyzed</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Dead Feature Rate</div>
+                <div class="stat-val" style="color: var(--danger);">0.0%</div>
+                <div class="stat-sub">0 inactive across corpus</div>
+            </div>
+        </div>
+
+        <h2 class="section-title">Quantitative Steering Benchmark: SAE vs Difference-of-Means</h2>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Steering Method</th>
+                        <th>Alpha (&alpha;)</th>
+                        <th>Judge Score (Efficacy &uarr;)</th>
+                        <th>Perplexity (PPL &darr;)</th>
+                        <th>Perplexity Delta (&Delta;PPL)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+        <tr>
+            <td><span class="method-tag" style="background: #3b82f622; color: #3b82f6;">SAE_Feature</span></td>
+            <td><strong>-4.0</strong></td>
+            <td>0.1325</td>
+            <td>8.0</td>
+            <td style="color: #f59e0b; font-weight: 600;">+1.00</td>
+        </tr>
+        
+
+        <tr>
+            <td><span class="method-tag" style="background: #3b82f622; color: #3b82f6;">SAE_Feature</span></td>
+            <td><strong>+0.0</strong></td>
+            <td>0.1474</td>
+            <td>4.2</td>
+            <td style="color: #10b981; font-weight: 600;">-2.79</td>
+        </tr>
+        
+
+        <tr>
+            <td><span class="method-tag" style="background: #3b82f622; color: #3b82f6;">SAE_Feature</span></td>
+            <td><strong>+4.0</strong></td>
+            <td>0.1842</td>
+            <td>9.0</td>
+            <td style="color: #f59e0b; font-weight: 600;">+2.02</td>
+        </tr>
+        
+
+        <tr>
+            <td><span class="method-tag" style="background: #3b82f622; color: #3b82f6;">SAE_Feature</span></td>
+            <td><strong>-4.0</strong></td>
+            <td>0.1545</td>
+            <td>7.4</td>
+            <td style="color: #f59e0b; font-weight: 600;">+0.36</td>
+        </tr>
+        
+
+        <tr>
+            <td><span class="method-tag" style="background: #3b82f622; color: #3b82f6;">SAE_Feature</span></td>
+            <td><strong>+0.0</strong></td>
+            <td>0.2607</td>
+            <td>5.1</td>
+            <td style="color: #10b981; font-weight: 600;">-1.87</td>
+        </tr>
+        
+
+        <tr>
+            <td><span class="method-tag" style="background: #3b82f622; color: #3b82f6;">SAE_Feature</span></td>
+            <td><strong>+4.0</strong></td>
+            <td>0.2119</td>
+            <td>10.5</td>
+            <td style="color: #f59e0b; font-weight: 600;">+3.53</td>
+        </tr>
+        
+
+        <tr>
+            <td><span class="method-tag" style="background: #3b82f622; color: #3b82f6;">SAE_Feature</span></td>
+            <td><strong>-4.0</strong></td>
+            <td>0.0654</td>
+            <td>9.9</td>
+            <td style="color: #f59e0b; font-weight: 600;">+2.87</td>
+        </tr>
+        
+
+        <tr>
+            <td><span class="method-tag" style="background: #3b82f622; color: #3b82f6;">SAE_Feature</span></td>
+            <td><strong>+0.0</strong></td>
+            <td>0.0527</td>
+            <td>11.7</td>
+            <td style="color: #f59e0b; font-weight: 600;">+4.66</td>
+        </tr>
+        
+
+        <tr>
+            <td><span class="method-tag" style="background: #3b82f622; color: #3b82f6;">SAE_Feature</span></td>
+            <td><strong>+4.0</strong></td>
+            <td>0.0285</td>
+            <td>11.1</td>
+            <td style="color: #f59e0b; font-weight: 600;">+4.09</td>
+        </tr>
+        
+
+        <tr>
+            <td><span class="method-tag" style="background: #8b5cf622; color: #8b5cf6;">Diff_of_Means_Baseline</span></td>
+            <td><strong>-4.0</strong></td>
+            <td>0.1563</td>
+            <td>5.0</td>
+            <td style="color: #10b981; font-weight: 600;">-2.00</td>
+        </tr>
+        
+
+        <tr>
+            <td><span class="method-tag" style="background: #8b5cf622; color: #8b5cf6;">Diff_of_Means_Baseline</span></td>
+            <td><strong>+0.0</strong></td>
+            <td>0.1094</td>
+            <td>6.7</td>
+            <td style="color: #10b981; font-weight: 600;">-0.34</td>
+        </tr>
+        
+
+        <tr>
+            <td><span class="method-tag" style="background: #8b5cf622; color: #8b5cf6;">Diff_of_Means_Baseline</span></td>
+            <td><strong>+4.0</strong></td>
+            <td>0.1154</td>
+            <td>7.9</td>
+            <td style="color: #f59e0b; font-weight: 600;">+0.93</td>
+        </tr>
+        
+
+        <tr>
+            <td><span class="method-tag" style="background: #8b5cf622; color: #8b5cf6;">Diff_of_Means_Baseline</span></td>
+            <td><strong>-4.0</strong></td>
+            <td>0.2997</td>
+            <td>7.2</td>
+            <td style="color: #f59e0b; font-weight: 600;">+0.15</td>
+        </tr>
+        
+
+        <tr>
+            <td><span class="method-tag" style="background: #8b5cf622; color: #8b5cf6;">Diff_of_Means_Baseline</span></td>
+            <td><strong>+0.0</strong></td>
+            <td>0.3116</td>
+            <td>7.7</td>
+            <td style="color: #f59e0b; font-weight: 600;">+0.69</td>
+        </tr>
+        
+
+        <tr>
+            <td><span class="method-tag" style="background: #8b5cf622; color: #8b5cf6;">Diff_of_Means_Baseline</span></td>
+            <td><strong>+4.0</strong></td>
+            <td>0.2394</td>
+            <td>3.1</td>
+            <td style="color: #10b981; font-weight: 600;">-3.93</td>
+        </tr>
+        
+
+        <tr>
+            <td><span class="method-tag" style="background: #8b5cf622; color: #8b5cf6;">Diff_of_Means_Baseline</span></td>
+            <td><strong>-4.0</strong></td>
+            <td>0.0565</td>
+            <td>7.5</td>
+            <td style="color: #f59e0b; font-weight: 600;">+0.47</td>
+        </tr>
+        
+
+        <tr>
+            <td><span class="method-tag" style="background: #8b5cf622; color: #8b5cf6;">Diff_of_Means_Baseline</span></td>
+            <td><strong>+0.0</strong></td>
+            <td>0.0566</td>
+            <td>9.8</td>
+            <td style="color: #f59e0b; font-weight: 600;">+2.78</td>
+        </tr>
+        
+
+        <tr>
+            <td><span class="method-tag" style="background: #8b5cf622; color: #8b5cf6;">Diff_of_Means_Baseline</span></td>
+            <td><strong>+4.0</strong></td>
+            <td>0.0607</td>
+            <td>9.8</td>
+            <td style="color: #f59e0b; font-weight: 600;">+2.85</td>
+        </tr>
+        
+                </tbody>
+            </table>
+        </div>
+
+        <h2 class="section-title">Systematic Feature Explorer (10 Sampled Latents)</h2>
+        <div class="controls">
+            <input type="text" id="searchInput" class="search-input" placeholder="Search by feature ID, concept keyword, or token (e.g., 'python', 'def', 'sentiment')...">
+            <button class="filter-btn active" onclick="filterStatus('all')">All (10)</button>
+            <button class="filter-btn" onclick="filterStatus('interpretable')">Interpretable (10)</button>
+            <button class="filter-btn" onclick="filterStatus('polysemantic_or_noisy')">Polysemantic (0)</button>
+            <button class="filter-btn" onclick="filterStatus('dead')">Dead (0)</button>
+        </div>
+
+        <div class="feature-grid" id="featureGrid">
+            
+        <div class="feature-card" data-status="interpretable" data-search="1368 lexical association with tokens: '<|endoftext|>' <|endoftext|>, <|endoftext|>, <|endoftext|>">
+            <div class="card-header">
+                <span class="feat-id">Feature #1368</span>
+                <span class="badge" style="background: #10b98122; color: #10b981; border: 1px solid #10b98144;">Interpretable</span>
+            </div>
+            <div class="card-body">
+                <div class="meta-row">
+                    <span class="meta-label">Sample:</span> <span class="meta-val">Top Active</span>
+                    <span class="meta-label" style="margin-left: 12px;">Max Act:</span> <span class="meta-val">179.95</span>
+                    <span class="meta-label" style="margin-left: 12px;">Specificity:</span> <span class="meta-val">+0.00</span>
+                </div>
+                <div class="hypothesis-box">
+                    <strong>Hypothesis:</strong> Lexical association with tokens: '<|endoftext|>'
+                </div>
+                <div class="snippets-container">
+                    
+            <div class="snippet-box">
+                <span class="act-tag">act=179.95</span>
+                <span class="snip-text"><span class='hl' style='background: rgba(59, 130, 246, 0.4); padding: 1px 4px; border-radius: 3px; font-weight: 600;'><|endoftext|></span>A sparse autoenc</span>
+            </div>
+            
+            <div class="snippet-box">
+                <span class="act-tag">act=179.95</span>
+                <span class="snip-text"><span class='hl' style='background: rgba(59, 130, 246, 0.4); padding: 1px 4px; border-radius: 3px; font-weight: 600;'><|endoftext|></span>class ModelTrainer:</span>
+            </div>
+            
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="feature-card" data-status="interpretable" data-search="1073 lexical association with tokens: '<|endoftext|>' <|endoftext|>, <|endoftext|>, <|endoftext|>">
+            <div class="card-header">
+                <span class="feat-id">Feature #1073</span>
+                <span class="badge" style="background: #10b98122; color: #10b981; border: 1px solid #10b98144;">Interpretable</span>
+            </div>
+            <div class="card-body">
+                <div class="meta-row">
+                    <span class="meta-label">Sample:</span> <span class="meta-val">Top Active</span>
+                    <span class="meta-label" style="margin-left: 12px;">Max Act:</span> <span class="meta-val">179.49</span>
+                    <span class="meta-label" style="margin-left: 12px;">Specificity:</span> <span class="meta-val">+0.00</span>
+                </div>
+                <div class="hypothesis-box">
+                    <strong>Hypothesis:</strong> Lexical association with tokens: '<|endoftext|>'
+                </div>
+                <div class="snippets-container">
+                    
+            <div class="snippet-box">
+                <span class="act-tag">act=179.49</span>
+                <span class="snip-text"><span class='hl' style='background: rgba(59, 130, 246, 0.4); padding: 1px 4px; border-radius: 3px; font-weight: 600;'><|endoftext|></span>Python functions are defined using</span>
+            </div>
+            
+            <div class="snippet-box">
+                <span class="act-tag">act=179.49</span>
+                <span class="snip-text"><span class='hl' style='background: rgba(59, 130, 246, 0.4); padding: 1px 4px; border-radius: 3px; font-weight: 600;'><|endoftext|></span>Deep neural networks exhibit super</span>
+            </div>
+            
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="feature-card" data-status="interpretable" data-search="2192 lexical association with tokens: '<|endoftext|>' <|endoftext|>, <|endoftext|>, <|endoftext|>">
+            <div class="card-header">
+                <span class="feat-id">Feature #2192</span>
+                <span class="badge" style="background: #10b98122; color: #10b981; border: 1px solid #10b98144;">Interpretable</span>
+            </div>
+            <div class="card-body">
+                <div class="meta-row">
+                    <span class="meta-label">Sample:</span> <span class="meta-val">Top Active</span>
+                    <span class="meta-label" style="margin-left: 12px;">Max Act:</span> <span class="meta-val">156.66</span>
+                    <span class="meta-label" style="margin-left: 12px;">Specificity:</span> <span class="meta-val">+0.00</span>
+                </div>
+                <div class="hypothesis-box">
+                    <strong>Hypothesis:</strong> Lexical association with tokens: '<|endoftext|>'
+                </div>
+                <div class="snippets-container">
+                    
+            <div class="snippet-box">
+                <span class="act-tag">act=156.66</span>
+                <span class="snip-text"><span class='hl' style='background: rgba(59, 130, 246, 0.4); padding: 1px 4px; border-radius: 3px; font-weight: 600;'><|endoftext|></span>A sparse autoenc</span>
+            </div>
+            
+            <div class="snippet-box">
+                <span class="act-tag">act=156.66</span>
+                <span class="snip-text"><span class='hl' style='background: rgba(59, 130, 246, 0.4); padding: 1px 4px; border-radius: 3px; font-weight: 600;'><|endoftext|></span>class ModelTrainer:</span>
+            </div>
+            
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="feature-card" data-status="interpretable" data-search="1355 lexical association with tokens: '<|endoftext|>' <|endoftext|>, <|endoftext|>, <|endoftext|>">
+            <div class="card-header">
+                <span class="feat-id">Feature #1355</span>
+                <span class="badge" style="background: #10b98122; color: #10b981; border: 1px solid #10b98144;">Interpretable</span>
+            </div>
+            <div class="card-body">
+                <div class="meta-row">
+                    <span class="meta-label">Sample:</span> <span class="meta-val">Top Active</span>
+                    <span class="meta-label" style="margin-left: 12px;">Max Act:</span> <span class="meta-val">172.49</span>
+                    <span class="meta-label" style="margin-left: 12px;">Specificity:</span> <span class="meta-val">+0.00</span>
+                </div>
+                <div class="hypothesis-box">
+                    <strong>Hypothesis:</strong> Lexical association with tokens: '<|endoftext|>'
+                </div>
+                <div class="snippets-container">
+                    
+            <div class="snippet-box">
+                <span class="act-tag">act=172.49</span>
+                <span class="snip-text"><span class='hl' style='background: rgba(59, 130, 246, 0.4); padding: 1px 4px; border-radius: 3px; font-weight: 600;'><|endoftext|></span>Python functions are defined using</span>
+            </div>
+            
+            <div class="snippet-box">
+                <span class="act-tag">act=172.49</span>
+                <span class="snip-text"><span class='hl' style='background: rgba(59, 130, 246, 0.4); padding: 1px 4px; border-radius: 3px; font-weight: 600;'><|endoftext|></span>Deep neural networks exhibit super</span>
+            </div>
+            
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="feature-card" data-status="interpretable" data-search="1637 lexical association with tokens: '<|endoftext|>' <|endoftext|>, <|endoftext|>, <|endoftext|>">
+            <div class="card-header">
+                <span class="feat-id">Feature #1637</span>
+                <span class="badge" style="background: #10b98122; color: #10b981; border: 1px solid #10b98144;">Interpretable</span>
+            </div>
+            <div class="card-body">
+                <div class="meta-row">
+                    <span class="meta-label">Sample:</span> <span class="meta-val">Top Active</span>
+                    <span class="meta-label" style="margin-left: 12px;">Max Act:</span> <span class="meta-val">160.75</span>
+                    <span class="meta-label" style="margin-left: 12px;">Specificity:</span> <span class="meta-val">+0.00</span>
+                </div>
+                <div class="hypothesis-box">
+                    <strong>Hypothesis:</strong> Lexical association with tokens: '<|endoftext|>'
+                </div>
+                <div class="snippets-container">
+                    
+            <div class="snippet-box">
+                <span class="act-tag">act=160.75</span>
+                <span class="snip-text"><span class='hl' style='background: rgba(59, 130, 246, 0.4); padding: 1px 4px; border-radius: 3px; font-weight: 600;'><|endoftext|></span>A sparse autoenc</span>
+            </div>
+            
+            <div class="snippet-box">
+                <span class="act-tag">act=160.75</span>
+                <span class="snip-text"><span class='hl' style='background: rgba(59, 130, 246, 0.4); padding: 1px 4px; border-radius: 3px; font-weight: 600;'><|endoftext|></span>class ModelTrainer:</span>
+            </div>
+            
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="feature-card" data-status="interpretable" data-search="4682 lexical association with tokens: 'near'  near,  near,  near">
+            <div class="card-header">
+                <span class="feat-id">Feature #4682</span>
+                <span class="badge" style="background: #10b98122; color: #10b981; border: 1px solid #10b98144;">Interpretable</span>
+            </div>
+            <div class="card-body">
+                <div class="meta-row">
+                    <span class="meta-label">Sample:</span> <span class="meta-val">Random</span>
+                    <span class="meta-label" style="margin-left: 12px;">Max Act:</span> <span class="meta-val">5.01</span>
+                    <span class="meta-label" style="margin-left: 12px;">Specificity:</span> <span class="meta-val">-1.00</span>
+                </div>
+                <div class="hypothesis-box">
+                    <strong>Hypothesis:</strong> Lexical association with tokens: 'near'
+                </div>
+                <div class="snippets-container">
+                    
+            <div class="snippet-box">
+                <span class="act-tag">act=5.01</span>
+                <span class="snip-text"> jumps over the lazy dog<span class='hl' style='background: rgba(59, 130, 246, 0.4); padding: 1px 4px; border-radius: 3px; font-weight: 600;'> near</span> the peaceful countryside river.</span>
+            </div>
+            
+            <div class="snippet-box">
+                <span class="act-tag">act=5.01</span>
+                <span class="snip-text"> jumps over the lazy dog<span class='hl' style='background: rgba(59, 130, 246, 0.4); padding: 1px 4px; border-radius: 3px; font-weight: 600;'> near</span> the peaceful countryside river.</span>
+            </div>
+            
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="feature-card" data-status="interpretable" data-search="1285 lexical association with tokens: '<|endoftext|>' <|endoftext|>, <|endoftext|>, <|endoftext|>">
+            <div class="card-header">
+                <span class="feat-id">Feature #1285</span>
+                <span class="badge" style="background: #10b98122; color: #10b981; border: 1px solid #10b98144;">Interpretable</span>
+            </div>
+            <div class="card-body">
+                <div class="meta-row">
+                    <span class="meta-label">Sample:</span> <span class="meta-val">Random</span>
+                    <span class="meta-label" style="margin-left: 12px;">Max Act:</span> <span class="meta-val">1.43</span>
+                    <span class="meta-label" style="margin-left: 12px;">Specificity:</span> <span class="meta-val">-0.00</span>
+                </div>
+                <div class="hypothesis-box">
+                    <strong>Hypothesis:</strong> Lexical association with tokens: '<|endoftext|>'
+                </div>
+                <div class="snippets-container">
+                    
+            <div class="snippet-box">
+                <span class="act-tag">act=1.43</span>
+                <span class="snip-text"><span class='hl' style='background: rgba(59, 130, 246, 0.4); padding: 1px 4px; border-radius: 3px; font-weight: 600;'><|endoftext|></span>A sparse autoenc</span>
+            </div>
+            
+            <div class="snippet-box">
+                <span class="act-tag">act=1.43</span>
+                <span class="snip-text"><span class='hl' style='background: rgba(59, 130, 246, 0.4); padding: 1px 4px; border-radius: 3px; font-weight: 600;'><|endoftext|></span>class ModelTrainer:</span>
+            </div>
+            
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="feature-card" data-status="interpretable" data-search="3248 lexical association with tokens: '<|endoftext|>' <|endoftext|>, <|endoftext|>, <|endoftext|>">
+            <div class="card-header">
+                <span class="feat-id">Feature #3248</span>
+                <span class="badge" style="background: #10b98122; color: #10b981; border: 1px solid #10b98144;">Interpretable</span>
+            </div>
+            <div class="card-body">
+                <div class="meta-row">
+                    <span class="meta-label">Sample:</span> <span class="meta-val">Random</span>
+                    <span class="meta-label" style="margin-left: 12px;">Max Act:</span> <span class="meta-val">68.98</span>
+                    <span class="meta-label" style="margin-left: 12px;">Specificity:</span> <span class="meta-val">-0.00</span>
+                </div>
+                <div class="hypothesis-box">
+                    <strong>Hypothesis:</strong> Lexical association with tokens: '<|endoftext|>'
+                </div>
+                <div class="snippets-container">
+                    
+            <div class="snippet-box">
+                <span class="act-tag">act=68.98</span>
+                <span class="snip-text"><span class='hl' style='background: rgba(59, 130, 246, 0.4); padding: 1px 4px; border-radius: 3px; font-weight: 600;'><|endoftext|></span>Python functions are defined using</span>
+            </div>
+            
+            <div class="snippet-box">
+                <span class="act-tag">act=68.98</span>
+                <span class="snip-text"><span class='hl' style='background: rgba(59, 130, 246, 0.4); padding: 1px 4px; border-radius: 3px; font-weight: 600;'><|endoftext|></span>A sparse autoenc</span>
+            </div>
+            
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="feature-card" data-status="interpretable" data-search="2430 programming syntax and code delimiters (e.g., (, (, () (, (, (">
+            <div class="card-header">
+                <span class="feat-id">Feature #2430</span>
+                <span class="badge" style="background: #10b98122; color: #10b981; border: 1px solid #10b98144;">Interpretable</span>
+            </div>
+            <div class="card-body">
+                <div class="meta-row">
+                    <span class="meta-label">Sample:</span> <span class="meta-val">Random</span>
+                    <span class="meta-label" style="margin-left: 12px;">Max Act:</span> <span class="meta-val">2.75</span>
+                    <span class="meta-label" style="margin-left: 12px;">Specificity:</span> <span class="meta-val">+0.67</span>
+                </div>
+                <div class="hypothesis-box">
+                    <strong>Hypothesis:</strong> Programming syntax and code delimiters (e.g., (, (, ()
+                </div>
+                <div class="snippets-container">
+                    
+            <div class="snippet-box">
+                <span class="act-tag">act=2.75</span>
+                <span class="snip-text">  def __init__<span class='hl' style='background: rgba(59, 130, 246, 0.4); padding: 1px 4px; border-radius: 3px; font-weight: 600;'>(</span>self, lr=</span>
+            </div>
+            
+            <div class="snippet-box">
+                <span class="act-tag">act=2.75</span>
+                <span class="snip-text">  def __init__<span class='hl' style='background: rgba(59, 130, 246, 0.4); padding: 1px 4px; border-radius: 3px; font-weight: 600;'>(</span>self, lr=</span>
+            </div>
+            
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="feature-card" data-status="interpretable" data-search="3150 lexical association with tokens: 'oen' oen, oen, oen">
+            <div class="card-header">
+                <span class="feat-id">Feature #3150</span>
+                <span class="badge" style="background: #10b98122; color: #10b981; border: 1px solid #10b98144;">Interpretable</span>
+            </div>
+            <div class="card-body">
+                <div class="meta-row">
+                    <span class="meta-label">Sample:</span> <span class="meta-val">Random</span>
+                    <span class="meta-label" style="margin-left: 12px;">Max Act:</span> <span class="meta-val">1.75</span>
+                    <span class="meta-label" style="margin-left: 12px;">Specificity:</span> <span class="meta-val">-1.00</span>
+                </div>
+                <div class="hypothesis-box">
+                    <strong>Hypothesis:</strong> Lexical association with tokens: 'oen'
+                </div>
+                <div class="snippets-container">
+                    
+            <div class="snippet-box">
+                <span class="act-tag">act=1.75</span>
+                <span class="snip-text"><|endoftext|>A sparse aut<span class='hl' style='background: rgba(59, 130, 246, 0.4); padding: 1px 4px; border-radius: 3px; font-weight: 600;'>oen</span>coder uses an over</span>
+            </div>
+            
+            <div class="snippet-box">
+                <span class="act-tag">act=1.75</span>
+                <span class="snip-text"><|endoftext|>A sparse aut<span class='hl' style='background: rgba(59, 130, 246, 0.4); padding: 1px 4px; border-radius: 3px; font-weight: 600;'>oen</span>coder uses an over</span>
+            </div>
+            
+                </div>
+            </div>
+        </div>
+        
+        </div>
+    </div>
+
+    <script>
+        let currentFilter = 'all';
+
+        function filterStatus(status) {
+            currentFilter = status;
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.textContent.toLowerCase().startsWith(status));
+            });
+            applyFilters();
+        }
+
+        function applyFilters() {
+            const query = document.getElementById('searchInput').value.toLowerCase().trim();
+            const cards = document.querySelectorAll('.feature-card');
+
+            cards.forEach(card => {
+                const status = card.getAttribute('data-status');
+                const text = card.getAttribute('data-search');
+
+                const matchesStatus = (currentFilter === 'all' || status === currentFilter);
+                const matchesQuery = (!query || text.includes(query));
+
+                card.style.display = (matchesStatus && matchesQuery) ? 'flex' : 'none';
+            });
+        }
+
+        document.getElementById('searchInput').addEventListener('input', applyFilters);
+    </script>
+</body>
+</html>
